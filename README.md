@@ -1,0 +1,1 @@
+# Hackintosh-ROG-STRIX-Z490I
