@@ -1,6 +1,6 @@
 # Hackintosh-ROG-STRIX-Z490I
 
-Here's details about my hackintosh on Asus ROG STRIZX Z490I. I know very little about hackintosh things, all I have done is follow the **OpenCore Desktop Guide**. I try to use only the necessary kexts and AHCIs, the basic installation has finished, I'm still working on it since some hardware is not working and it's not perfect. 
+This repository is about hackintosh on Asus ROG STRIZX Z490I. I know very little about hackintosh things, all I have done is follow the **[OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/)**. The basic installation has finished, I'm still working on it since some hardwares is not working and the user experience is not perfect yet.
 
 I don't know how to do a complete functional test, if someone is interested in this project, your're welcome.
 
@@ -22,12 +22,12 @@ I don't know how to do a complete functional test, if someone is interested in t
 
 ## What's working
 
--[x] **iGPU Intel UHD630**, HDMI display output is ok, I'm not sure if the audio output is working since my monitor has no speakers.
--[] **dGPU AMD Radeon VII**, natively supported, my card is still on the way.
--[] **Audio ALCS1220A**, I'v tried every layout-id in the AppleALC Codec list, still not work.
--[x] **Ethernet Intel I225-V**, thanks for **SchmockLord's** work, details in [issue#8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
--[] **Wifi/BT**, I tried replace the onboard card with a BCM94352Z card, it can be pluged in but not work even in Windows, thanks for the CNVI thing😓. So I bought a m.2 B+M-Key adapter with BCM94360CS, still on the way, if it work I had to give up a m.2 SSD.
--[x]**USB**, usb is working, I've done nothing and I don't know what should I test for detail.
+- [x] **iGPU Intel UHD630**, HDMI display output is ok, I'm not sure if the audio output is working since my monitor has no speakers.
+- [ ] **dGPU AMD Radeon VII**, natively supported, my card is still on the way.
+- [ ] **Audio ALCS1220A**, I'v tried every layout-id in the AppleALC Codec list, still not work.
+- [x] **Ethernet Intel I225-V**, thanks for **SchmockLord's** work, details in [issue#8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
+- [ ] **Wifi/BT**, I tried replace the onboard card with a BCM94352Z card, it can be pluged in but not work even in Windows, thanks for the CNVI thing😓. So I bought a m.2 B+M-Key adapter with BCM94360CS, still on the way, if it work I had to give up a m.2 SSD.
+- [x] **USB**, usb is working, I've done nothing and I don't know what should I test for detail.
 
 ## EFI
 
@@ -54,5 +54,5 @@ Compiled by following the [ACPI Guide](https://dortania.github.io/Getting-Starte
 
 ## Credits
 
-[OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/)
-[SchmockLord's build on Gigabyte Z490](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
+* [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/)
+* [SchmockLord's build on Gigabyte Z490-D](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
