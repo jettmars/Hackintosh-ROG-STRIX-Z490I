@@ -16,7 +16,7 @@ I don't know how to do a complete functional test, if someone is interested in t
     * WiFi/BT: Intel AX201NGW
     * Audio: Realtek ALCS1220A
 * CPU: Intel i7-10700k
-* GPU: AMD Radeon VII / Intel UHD630
+* GPU: Intel UHD630 / AMD Radeon VII
 * RAM: Corsair Vengeance LPX DDR4 3200 32GB
 * Drive: Samsung 970 EVO Plus
 
@@ -39,7 +39,7 @@ I don't know how to do a complete functional test, if someone is interested in t
 
 ### SSDTs
 
-Compiled by following the [ACPI Guide](https://dortania.github.io/Getting-Started-With-ACPI/), the `.dls` SSDT files can be found in SSDTS folder. According to the guide, SSDT-PMC is used for NVRAM support, but desktop Z490 boards **DO NOT** need it, so I didn't compile it. I'm not sure how to check if it is working.
+Compiled by following the [ACPI Guide](https://dortania.github.io/Getting-Started-With-ACPI/), the `.dls` SSDT files can be found in SSDTS folder. According to the guide, SSDT-PMC is used for NVRAM support, but desktop Z490 boards **DO NOT** need it, so it's not included in ACPI. I'm not sure how to check if the NVRAM is ok.
 
 * SSDT-AWAC.aml
 * SSDT-EC-USBX.aml
