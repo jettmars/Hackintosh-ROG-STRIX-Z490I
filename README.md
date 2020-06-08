@@ -4,6 +4,8 @@ This repository is about hackintosh on Asus ROG STRIZX Z490I. I know very little
 
 I don't know how to do a complete functional test, if someone is interested in this project, your're welcome.
 
+**Important:** Anyone has the same board can use the EFI folder directly except the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start.
+
 ## Software
 
 * Bootloader: OpenCore 0.5.9
