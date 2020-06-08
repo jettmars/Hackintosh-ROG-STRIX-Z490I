@@ -23,24 +23,32 @@ I don't know how to do a complete functional test, if someone is interested in t
 ## What's working
 
 - [x] **iGPU Intel UHD630**, HDMI display output is ok, I'm not sure if the audio output is working since my monitor has no speakers.
+- [x] **Ethernet Intel I225-V**, thanks for **SchmockLord's** work, details in [issue#8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
+- [x] **USB**, usb is working, I've done nothing and I don't know what should I test for detail.
+
+## TODO
+
 - [ ] **dGPU AMD Radeon VII**, natively supported, my card is still on the way.
 - [ ] **Audio ALCS1220A**, I'v tried every layout-id in the AppleALC Codec list, still not work.
-- [x] **Ethernet Intel I225-V**, thanks for **SchmockLord's** work, details in [issue#8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
 - [ ] **Wifi/BT**, I tried replace the onboard card with a BCM94352Z card, it can be pluged in but not work even in Windows, thanks for the CNVI thing😓. So I bought a m.2 B+M-Key adapter with BCM94360CS, still on the way, if it work I had to give up a m.2 SSD.
-- [x] **USB**, usb is working, I've done nothing and I don't know what should I test for detail.
+- [ ] Optimizing Power Management
+- [ ] Fixing CFG Lock
+- [ ] Setting up OpenCore's GUI
 
 ## EFI
 
-### ACPI
+### SSDTs
 
-Compiled by following the [ACPI Guide](https://dortania.github.io/Getting-Started-With-ACPI/)
+Compiled by following the [ACPI Guide](https://dortania.github.io/Getting-Started-With-ACPI/), the `.dls` SSDT files can be found in SSDTS folder. According to the guide, SSDT-PMC is used for NVRAM support, but desktop Z490 boards **DO NOT** need it, so I didn't compile it. I'm not sure how to check if it is working.
 
-* SSDT-AWAC
-* SSDT-EC-USBX
-* SSDT-PLUG
-* SSDT-SBUS-MCHC
+* SSDT-AWAC.aml
+* SSDT-EC-USBX.aml
+* SSDT-PLUG.aml
+* SSDT-SBUS-MCHC.aml
 
 ### Kexts
+
+All kexts with version tag are downloaded from original repositories.
 
 * VirtualSMC.kext `1.1.4`
 * SMCProcessor.kext `1.1.4`
