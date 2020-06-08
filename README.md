@@ -25,7 +25,7 @@ I don't know how to do a complete functional test, if someone is interested in t
 ## What's working
 
 - [x] **iGPU Intel UHD630**, HDMI display output is ok, didn't test audio output since my monitor has no speakers.
-- [x] **Ethernet Intel I225-V**, thanks for **SchmockLord**'s** work, details in [issue#8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
+- [x] **Ethernet Intel I225-V**, thanks for **SchmockLord**'s work, details in [issue#8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
 - [x] **USB**, working for USB flash disk, more test need to be done.
 
 ## TODO
