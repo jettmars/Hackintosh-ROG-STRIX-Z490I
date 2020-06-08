@@ -22,15 +22,15 @@ I don't know how to do a complete functional test, if someone is interested in t
 
 ## What's working
 
-- [x] **iGPU Intel UHD630**, HDMI display output is ok, I'm not sure if the audio output is working since my monitor has no speakers.
-- [x] **Ethernet Intel I225-V**, thanks for **SchmockLord's** work, details in [issue#8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
-- [x] **USB**, usb is working, I've done nothing and I don't know what should I test for detail.
+- [x] **iGPU Intel UHD630**, HDMI display output is ok, didn't test audio output since my monitor has no speakers.
+- [x] **Ethernet Intel I225-V**, thanks for **SchmockLord**'s** work, details in [issue#8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
+- [x] **USB**, working for USB flash disk, more test need to be done.
 
 ## TODO
 
 - [ ] **dGPU AMD Radeon VII**, natively supported, my card is still on the way.
 - [ ] **Audio ALCS1220A**, I'v tried every layout-id in the AppleALC Codec list, still not work.
-- [ ] **Wifi/BT**, I tried replace the onboard card with a BCM94352Z card, it can be pluged in but not work even in Windows, thanks for the CNVI thing😓. So I bought a m.2 B+M-Key adapter with BCM94360CS, still on the way, if it work I had to give up a m.2 SSD.
+- [ ] **Wifi/BT**, I tried replace the onboard card with a m.2 A-Key BCM94352Z card, it can be pluged in but not work even in Windows, thanks for the CNVI thing😓. So I bought a m.2 B+M-Key adapter with BCM94360CS, still on the way, I have to give up a m.2 SSD if it works.
 - [ ] Optimizing Power Management
 - [ ] Fixing CFG Lock
 - [ ] Setting up OpenCore's GUI
