@@ -31,7 +31,7 @@ This repository is about hackintosh on **Asus ROG STRIZX Z490I**. The basic inst
 - [ ] **USB**, working for USB flash disk. USB map need to be done.
 - [ ] **dGPU AMD Radeon VII**, natively supported, my card is still on the way.
 - [ ] **Audio ALCS1220A**, I'v tried every layout-id in the AppleALC Codec list, still not work, I can see the right device in system but no sound output.
-- [ ] **Wifi/BT**, I tried replace the onboard card with a m.2 A-Key BCM94352Z card, it can be pluged in but not work even in Windows, thanks to the CNVi thing😓. So I bought a m.2 B+M-Key adapter with Apple Airport Card BCM94360CS, Wifi is working perfect now, but the bluetooth can not be recognized, I'll try to fix USB map later and see. Sadly, I have to give up a m.2 slot for SSD and the ssd heat sink onboard, while now I have two wireless network cards, one for macOS and one for windows✌🏻.
+- [ ] **Wifi/BT**, I tried replace the onboard card with a m.2 A-Key BCM94352Z card, it can be pluged in but not work even in Windows, thanks to the CNVi thing 😓. So I bought a m.2 B+M-Key adapter with Apple Airport Card BCM94360CS, Wifi is working perfect now, but the bluetooth can not be recognized, I'll try to fix USB map later and see. Sadly, I have to give up a m.2 slot for SSD and the ssd heat sink onboard, while now I have two wireless network cards, one for macOS and one for windows.
 - [ ] Optimizing Power Management
 - [ ] Fixing CFG Lock
 - [ ] Setting up OpenCore's GUI
