@@ -17,7 +17,7 @@ I don't know how to do a complete functional test, if someone is interested in t
     * Ethernet: Intel I225-V 2.5Gbit
     * WiFi/BT: Intel AX201NGW
     * Audio: Realtek ALCS1220A
-* CPU: Intel i7-10700k
+* CPU: Intel i7-10700
 * GPU: Intel UHD630 / AMD Radeon VII
 * RAM: Corsair Vengeance LPX DDR4 3200 32GB
 * Drive: Samsung 970 EVO Plus
@@ -25,14 +25,15 @@ I don't know how to do a complete functional test, if someone is interested in t
 ## What's working
 
 - [x] **iGPU Intel UHD630**, HDMI display output is ok, didn't test audio output since my monitor has no speakers.
-- [x] **Ethernet Intel I225-V**, thanks for **SchmockLord**'s work, details in [issue#8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
-- [x] **USB**, working for USB flash disk, more test need to be done.
+- [x] **Ethernet Intel I225-V**, thanks for **SchmockLord**'s repo, details in [issue#8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
+- [x] **Shutdown/Restart**
 
 ## TODO
 
+- [ ] **USB**, working for USB flash disk. USB map need to be done.
 - [ ] **dGPU AMD Radeon VII**, natively supported, my card is still on the way.
-- [ ] **Audio ALCS1220A**, I'v tried every layout-id in the AppleALC Codec list, still not work.
-- [ ] **Wifi/BT**, I tried replace the onboard card with a m.2 A-Key BCM94352Z card, it can be pluged in but not work even in Windows, thanks for the CNVI thing😓. So I bought a m.2 B+M-Key adapter with BCM94360CS, still on the way, I have to give up a m.2 SSD if it works.
+- [ ] **Audio ALCS1220A**, I'v tried every layout-id in the AppleALC Codec list, still not work, I can see the right device in system but no sound output.
+- [ ] **Wifi/BT**, I tried replace the onboard card with a m.2 A-Key BCM94352Z card, it can be pluged in but not work even in Windows, thanks for the CNVI thing😓. So I bought a m.2 B+M-Key adapter with Apple Airport Card BCM94360CS, Wifi is working perfect now, but the bluetooth can not be recognized, I'll try to fix USB map later and see. I have to give up a m.2 slot for SSD and the ssd heat sink onboard. 
 - [ ] Optimizing Power Management
 - [ ] Fixing CFG Lock
 - [ ] Setting up OpenCore's GUI
