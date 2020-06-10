@@ -1,10 +1,8 @@
 # Hackintosh-ROG-STRIX-Z490I
 
-This repository is about hackintosh on Asus ROG STRIZX Z490I. I know very little about hackintosh things, all I have done is follow the **[OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/)**. The basic installation has finished, I'm still working on it since some hardwares is not working and the user experience is not perfect yet.
+This repository is about hackintosh on Asus ROG STRIZX Z490I. The basic installation has finished, I'm still working on it since some hardwares is not working and the experience is not perfect yet. If someone is interested in this project, your're welcomed to join me.
 
-I don't know how to do a complete functional test, if someone is interested in this project, your're welcome.
-
-**Important:** Anyone has the same board can use the EFI folder directly except the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start.
+**Note:** Anyone has the same board can use the EFI folder directly except the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before you start.
 
 ## Software
 
@@ -67,3 +65,4 @@ All kexts with version tag are downloaded from original repositories.
 
 * [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/)
 * [SchmockLord's build on Gigabyte Z490-D](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
+* [yilmazca's build on Asus Prime Z490-A](https://github.com/yilmazca/intel-i9-10900K-Asus-prime-Z490A-hackintosh)
