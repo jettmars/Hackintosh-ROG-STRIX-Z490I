@@ -1,13 +1,12 @@
 # Hackintosh-ROG-STRIX-Z490I
 
-This repository is about hackintosh on **Asus ROG STRIZX Z490I**. The basic installation has finished, I'm still working on it since some hardwares are not working and the experience is not perfect yet. If someone is interested in this project, your're welcomed to join me.
+This repository is about hackintosh on **Asus ROG STRIZX Z490I**. 
 
-**Note:** Anyone has the same board can use the EFI folder directly except the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before you start, and try to build step by step yourself.
+**The project is not completely finished yet**
 
-## Software
+I'v done the basic installation, still working on it since some hardwares are not working and the experience is not perfect yet. If someone is interested in this project, your're welcomed to join me.
 
-* Bootloader: OpenCore 0.5.9
-* OS: macOS Catalina 10.15.5 (19F96 / 2020-05-26)
+Anyone has the same board can use the EFI folder directly except the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start, and try to build step by step yourself.
 
 ## Hardware
 
@@ -20,21 +19,48 @@ This repository is about hackintosh on **Asus ROG STRIZX Z490I**. The basic inst
 * RAM: Corsair Vengeance LPX DDR4 3200 32GB
 * Drive: Samsung 970 EVO Plus
 
+## Software
+
+* Bootloader: OpenCore 0.5.9
+* OS: macOS Catalina 10.15.5 (19F96 / 2020-05-26)
+
 ## What's working
 
-- [x] **iGPU Intel UHD630**, HDMI display output is ok, didn't test audio output since my monitor has no speakers.
-- [x] **Ethernet Intel I225-V**, thanks for **SchmockLord**'s repo, details in [issue#8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
-- [x] **Shutdown/Restart**
+- [x] Intel UHD630 (iGPU)
+- [ ] AMD Radeon VII (dGPU)
+- [x] Audio Realtek ALCS1220A
+- [x] Intel I225-V 2.5Gb Ethernet
+- [ ] Wifi/BT (BCM94360CS)
+- [ ] USB
+- [ ] Sleep/Wake
+- [ ] Reboot/Shutdown
 
-## TODO
 
-- [ ] **USB**, working for USB flash disk. USB map need to be done.
-- [ ] **dGPU AMD Radeon VII**, natively supported, my card is still on the way.
-- [ ] **Audio ALCS1220A**, I'v tried every layout-id in the AppleALC Codec list, still not work, I can see the right device in system but no sound output.
-- [ ] **Wifi/BT**, I tried replace the onboard card with a m.2 A-Key BCM94352Z card, it can be pluged in but not work even in Windows, thanks to the CNVi thing 😓. So I bought a m.2 B+M-Key adapter with Apple Airport Card BCM94360CS, Wifi is working perfect now, but the bluetooth can not be recognized, I'll try to fix USB map later and see. Sadly, I have to give up a m.2 slot for SSD and the ssd heat sink onboard, while now I have two wireless network cards, one for macOS and one for windows.
-- [ ] Optimizing Power Management
-- [ ] Fixing CFG Lock
-- [ ] Setting up OpenCore's GUI
+## Details
+
+### GPU
+
+* **iGPU Intel UHD630**, HDMI display output is ok, didn't test audio output since my monitor has no speakers.
+
+* **dGPU AMD Radeon VII**, natively supported in macOS
+
+### Ethernet 
+
+Working with `FakePCIID_Intel_I225-V.kext`, I found this from **SchmockLord**'s repository, after add `FakePCIID.kext` and `FakePCIID_intel_I225-V.kext` to your Kexts folder and config.plist's Kernel path, add device-id `F2150000` to DeviceProperties path, then it works. Details in [Issue 2.5Gbit Ethernet (Intel I225-V) Don't work #8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
+
+### Wifi/BT
+
+Working by using a m.2 B+M-Key adapter with Apple Airport Card BCM94360CS.
+
+The onboard wireless network card Intel AX201NGW uses m.2 E-Key slot and CNVi protocol. I tried replace it with a m.2 A-Key BCM94352Z card, the slot is compatible but it didn't work even in windows, thanks to the CNVi thing 😓. At last, I used a m.2 B+M-Key adapter with Apple Airport Card BCM94360CS, Wifi/BT is working perfect now. Sadly, I have to give up a m.2 slot for SSD and the onboard ssd heat sink, while now I have two wireless network cards, one for macOS and one for windows.
+
+The bluetooth can not be recognized by default, because it uses an onboard internal USB2.0 port for power supply. So USB map should be fixed first.
+
+### USB
+
+### Audio
+
+At the beginning I'v tried every layout-id in the AppleALC Codec list that ALCS1220A support, device info is correct in system but no sound output.
 
 ## EFI
 
@@ -59,11 +85,9 @@ All kexts with version tag are downloaded from original repositories.
 * AppleALC.kext `1.5.0`
 * IntelMausi.kext `1.0.3`
 * NVMeFix.kext `1.0.2`
-* FakePCIID.kext & FakePCIID_intel_I225-V.kext
-
-## Installation
-
-I'll add installation details after the work is completely done.
+* FakePCIID.kext (from RehabMan)
+* FakePCIID_Intel_HDMI_Audio.kext (from RehabMan)
+* FakePCIID_intel_I225-V.kext (from SchmockLord)
 
 ## Credits
 
