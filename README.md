@@ -39,7 +39,7 @@ Anyone has the same board can use the EFI folder directly except the `EFI/OC/con
 
 **iGPU Intel UHD630**
 
-Just use the default config form OpenCore Desktop Guide.
+Just use the default config from OpenCore Desktop Guide.
 
 DeviceProperties: 
 
@@ -55,7 +55,7 @@ DeviceProperties:
 </dict>
 ```
 
- HDMI display output is woring, didn't test DP and monitor audio yet. Since the system audio is fixed, I think monitor audio will work too. Sadly, I found some software will panic when using iGPU HDMI, such as `System Preference -> Users&Groups` and `Wechat`, I don't knonw what's wrong and didn't do much test yet.
+HDMI display output is working, didn't test DP and monitor audio yet. Since the system audio is fixed, I think monitor audio will work too. Sadly, I found some software will panic when using iGPU HDMI, such as `System Preference -> Users&Groups` and `Wechat`, I don't knonw what's wrong and didn't do much test yet.
 
 **dGPU AMD Radeon VII**, natively supported, everything is fine.
 
