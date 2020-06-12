@@ -10,7 +10,7 @@ Anyone has the same board can use the EFI folder directly except the `EFI/OC/con
 
 * Motherboard: Asus ROG STRIX Z490-I
     * Ethernet: Intel I225-V 2.5Gbit
-    * WiFi/BT: Intel AX201NGW
+    * Wi-Fi/BT: Intel AX201NGW
     * Audio: Realtek ALCS1220A
 * CPU: Intel i7-10700/10700k
 * GPU: Intel UHD630 / AMD Radeon VII
@@ -28,7 +28,7 @@ Anyone has the same board can use the EFI folder directly except the `EFI/OC/con
 - [x] AMD Radeon VII (dGPU)
 - [x] Audio Realtek ALCS1220A
 - [x] Intel I225-V 2.5Gb Ethernet
-- [x] Wifi/BT (BCM94360CS)
+- [x] Wi-Fi/BT (BCM94360CS)
 - [ ] USB, mapping need to be fixed
 - [ ] Sleep/Wake
 - [x] Reboot/Shutdown
@@ -82,17 +82,17 @@ DeviceProperties:
 
 I found `FakePCIID_Intel_I225-V.kext` from **SchmockLord**'s repository, details in [Issue 2.5Gbit Ethernet (Intel I225-V) Don't work #8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
 
-### Wifi/BT
+### Wi-Fi/BT
 
-Working by using a m.2 B+M-Key adapter with Apple Airport Card BCM94360CS. It's natively supported, Airdrop, handoff and sidecar are perfect.
+Working by using a m.2 B+M-Key adapter with Apple Airport Card BCM94360CS. It's natively supported, airdrop, handoff and sidecar are working perfectly.
 
-The onboard wireless network card Intel AX201NGW uses m.2 E-Key slot and CNVi protocol. I tried replace it with a m.2 A-Key BCM94352Z card, the slot is compatible but it didn't work even in windows, thanks to the CNVi thing 😓. At last, I used a m.2 B+M-Key adapter with Apple Airport Card BCM94360CS, Wifi/BT is working perfect now. Sadly, I have to give up a m.2 slot for SSD and the onboard ssd heat sink, while now I have two wireless network cards, one for macOS and one for windows.
+The onboard wireless network card Intel AX201NGW uses m.2 E-Key slot and CNVi protocol. I tried replace it with a m.2 A-Key BCM94352Z card, the slot is compatible but it didn't work even in windows, thanks to the CNVi thing 😓. At last, I used a m.2 B+M-Key adapter with Apple Airport Card BCM94360CS, Wi-Fi/BT is working perfect now. Sadly, I have to give up a m.2 slot for SSD and the onboard ssd heat sink, while now I have two wireless network cards, one for macOS and one for windows.
 
-The bluetooth can not be recognized by default, because it uses an onboard internal USB2.0 port for power supply. So USB mapping should be fixed first.
+The bluetooth can not be recognized by default, because it uses an onboard USB2.0 port for power supply, so USB mapping should be fixed first.
 
 ### USB
 
-Actually I've done the USB mapping, but not perfect yet. I'm a little confusing about the result. I followed the [USB Mapping Guide](https://dortania.github.io/USB-Map-Guide/) step by step, and got the `USBMap.kext`, but after reboot, the port name is not exactly the same as before the mapping. I'll keep trying.
+Actually I've done the USB mapping, but not perfect yet. I'm a little confused about the result. I followed the [USB Mapping Guide](https://dortania.github.io/USB-Map-Guide/) step by step, and got the `USBMap.kext`, but after reboot, the port name is not exactly the same as before the mapping. I'll keep trying.
 
 For now, I’m sure the onboard USB2.0 port which bluetooth use is `HS13`, I mapped it to USB2.0 type to make bluetooth work. What I'm also confused is this port has the name `HS11` in windows, but there's no `HS11` in macOS, and the USB2.0 port on the IO panel also share the name `HS13`🤔. Can anyone explain to me ?
 
