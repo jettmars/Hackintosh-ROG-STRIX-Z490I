@@ -80,7 +80,7 @@ DeviceProperties:
 </dict>
 ```
 
-I found `FakePCIID_Intel_I225-V.kext` from **SchmockLord**'s repository, details in [Issue 2.5Gbit Ethernet (Intel I225-V) Don't work #8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
+`FakePCIID_Intel_I225-V.kext` is from **SchmockLord**'s repository, details in issue [2.5Gbit Ethernet (Intel I225-V) Don't work #8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
 
 ### Wi-Fi/BT
 
@@ -117,8 +117,6 @@ DeviceProperties:
     <data>cJ0AAA==</data>
 </dict>
 ```
-
-At the beginning, I've tried every layout-id from the AppleALC support list, audio device info was correct in system, but audio output just didn't work. Luckily I found **yilmazca's build**, we share almost the same onboard hardware.
 
 ## EFI
 
