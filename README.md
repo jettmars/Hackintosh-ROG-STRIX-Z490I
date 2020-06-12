@@ -59,8 +59,8 @@ DeviceProperties:
 
 **dGPU AMD Radeon VII**, natively supported, everything is fine.
 
-![](assets/iGPU.png)
-![](assets/dGPU.png)
+<img src="assets/iGPU.png" width="500" alt="iGPU"/>
+<img src="assets/dGPU.png" width="500" alt="dGPU"/>
 
 ### Ethernet 
 
