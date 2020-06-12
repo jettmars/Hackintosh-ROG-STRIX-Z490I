@@ -62,6 +62,28 @@ HDMI display output is working, didn't test DP and monitor audio yet. Since the 
 <img src="assets/iGPU.png" width="500" alt="iGPU"/>
 <img src="assets/dGPU.png" width="500" alt="dGPU"/>
 
+### Audio
+
+Working by:
+
+* AppleALC.kext
+* FakePCIID.kext
+* FakePCIID_Intel_HDMI_Audio.kext
+* device-id=`709D0000`
+* layout-id=7
+
+DeviceProperties: 
+
+```xml
+<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
+<dict>
+    <key>layout-id</key>
+    <integer>7</integer>
+    <key>device-id</key>
+    <data>cJ0AAA==</data>
+</dict>
+```
+
 ### Ethernet 
 
 Working by:
@@ -95,28 +117,6 @@ The bluetooth can not be recognized by default, because it uses an onboard USB2.
 Actually I've done the USB mapping, but not perfect yet. I'm a little confused about the result. I followed the [USB Mapping Guide](https://dortania.github.io/USB-Map-Guide/) step by step, and got the `USBMap.kext`, but after reboot, the port name is not exactly the same as before the mapping. I'll keep trying.
 
 For now, I’m sure the onboard USB2.0 port which bluetooth use is `HS13`, I mapped it to USB2.0 type to make bluetooth work. What I'm also confused is this port has the name `HS11` in windows, but there's no `HS11` in macOS, and the USB2.0 port on the IO panel also share the name `HS13`🤔. Can anyone explain to me ?
-
-### Audio ALC
-
-Working by:
-
-* AppleALC.kext
-* FakePCIID.kext
-* FakePCIID_Intel_HDMI_Audio.kext
-* device-id=`709D0000`
-* layout-id=7
-
-DeviceProperties: 
-
-```xml
-<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
-<dict>
-    <key>layout-id</key>
-    <integer>7</integer>
-    <key>device-id</key>
-    <data>cJ0AAA==</data>
-</dict>
-```
 
 ## EFI
 
