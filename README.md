@@ -2,9 +2,7 @@
 
 This repository is about hackintosh on **Asus ROG STRIZX Z490I**. 
 
-**The project is not completely finished yet**
-
-I'v done the basic installation, still working on it since some hardwares are not working and the experience is not perfect yet. If someone is interested in this project, your're welcomed to join me.
+**The project is not completely finished yet and a lot of functional test need to be done**, I'v done the basic installation, still working on it since it's not perfect yet. I'm no expert in hackintosh, so this project won't be finished so fast, if someone is interested in this project, your're welcomed to join me.
 
 Anyone has the same board can use the EFI folder directly except the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start, and try to build step by step yourself.
 
@@ -26,41 +24,98 @@ Anyone has the same board can use the EFI folder directly except the `EFI/OC/con
 
 ## What's working
 
-- [x] Intel UHD630 (iGPU)
-- [ ] AMD Radeon VII (dGPU)
+- [x] Intel UHD630 (iGPU), not perfect
+- [x] AMD Radeon VII (dGPU)
 - [x] Audio Realtek ALCS1220A
 - [x] Intel I225-V 2.5Gb Ethernet
-- [ ] Wifi/BT (BCM94360CS)
-- [ ] USB
+- [x] Wifi/BT (BCM94360CS)
+- [ ] USB, mapping need to be fixed
 - [ ] Sleep/Wake
-- [ ] Reboot/Shutdown
-
+- [x] Reboot/Shutdown
 
 ## Details
 
 ### GPU
 
-* **iGPU Intel UHD630**, HDMI display output is ok, didn't test audio output since my monitor has no speakers.
+**iGPU Intel UHD630**
 
-* **dGPU AMD Radeon VII**, natively supported in macOS
+Just use the default config form OpenCore Desktop Guide.
+
+DeviceProperties: 
+
+```xml
+<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+<dict>
+    <key>AAPL,ig-platform-id</key>
+    <data>BwCbPg==</data>
+    <key>framebuffer-patch-enable</key>
+    <data>AQAAAA==</data>
+    <key>framebuffer-stolenmem</key>
+    <data>AAAwAQ==</data>
+</dict>
+```
+
+ HDMI display output is woring, didn't test DP and monitor audio yet. Since the system audio is fixed, I think monitor audio will work too. Sadly, I found some software will panic when using iGPU HDMI, such as `System Preference -> Users&Groups` and `Wechat`, I don't knonw what's wrong and didn't do much test yet.
+
+**dGPU AMD Radeon VII**, natively supported, everything is fine.
 
 ### Ethernet 
 
-Working with `FakePCIID_Intel_I225-V.kext`, I found this from **SchmockLord**'s repository, after add `FakePCIID.kext` and `FakePCIID_intel_I225-V.kext` to your Kexts folder and config.plist's Kernel path, add device-id `F2150000` to DeviceProperties path, then it works. Details in [Issue 2.5Gbit Ethernet (Intel I225-V) Don't work #8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
+Working by:
+
+* FakePCIID.kext
+* FakePCIID_Intel_I225-V.kext
+* device-id=`F2150000`
+
+DeviceProperties: 
+
+```xml
+<key>PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)</key>
+<dict>
+    <key>device-id</key>
+    <data>8hUAAA==</data>
+</dict>
+```
+
+I found `FakePCIID_Intel_I225-V.kext` from **SchmockLord**'s repository, details in [Issue 2.5Gbit Ethernet (Intel I225-V) Don't work #8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
 
 ### Wifi/BT
 
-Working by using a m.2 B+M-Key adapter with Apple Airport Card BCM94360CS.
+Working by using a m.2 B+M-Key adapter with Apple Airport Card BCM94360CS. It's natively supported, Airdrop, handoff and sidecar are perfect.
 
 The onboard wireless network card Intel AX201NGW uses m.2 E-Key slot and CNVi protocol. I tried replace it with a m.2 A-Key BCM94352Z card, the slot is compatible but it didn't work even in windows, thanks to the CNVi thing 😓. At last, I used a m.2 B+M-Key adapter with Apple Airport Card BCM94360CS, Wifi/BT is working perfect now. Sadly, I have to give up a m.2 slot for SSD and the onboard ssd heat sink, while now I have two wireless network cards, one for macOS and one for windows.
 
-The bluetooth can not be recognized by default, because it uses an onboard internal USB2.0 port for power supply. So USB map should be fixed first.
+The bluetooth can not be recognized by default, because it uses an onboard internal USB2.0 port for power supply. So USB mapping should be fixed first.
 
 ### USB
 
-### Audio
+Actually I've done the USB mapping, but not perfect yet. I'm a little confusing about the result. I followed the [USB Mapping Guide](https://dortania.github.io/USB-Map-Guide/) step by step, and got the `USBMap.kext`, but after reboot, the port name is not exactly the same as before the mapping. I'll keep trying.
 
-At the beginning I'v tried every layout-id in the AppleALC Codec list that ALCS1220A support, device info is correct in system but no sound output.
+For now, I’m sure the onboard USB2.0 port which bluetooth use is `HS13`, I mapped it to USB2.0 type to make bluetooth work. What I'm also confused is this port has the name `HS11` in windows, but there's no `HS11` in macOS, and the USB2.0 port on the IO panel also share the name `HS13`🤔. Can anyone explain to me ?
+
+### Audio ALC
+
+Working by:
+
+* AppleALC.kext
+* FakePCIID.kext
+* FakePCIID_Intel_HDMI_Audio.kext
+* device-id=`709D0000`
+* layout-id=7
+
+DeviceProperties: 
+
+```xml
+<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
+<dict>
+    <key>layout-id</key>
+    <integer>7</integer>
+    <key>device-id</key>
+    <data>cJ0AAA==</data>
+</dict>
+```
+
+At the beginning, I've tried every layout-id from the AppleALC support list, audio device info was correct in system, but audio output just didn't work. Luckily I found **yilmazca's build**, we share almost the same onboard hardware.
 
 ## EFI
 
@@ -85,8 +140,8 @@ All kexts with version tag are downloaded from original repositories.
 * AppleALC.kext `1.5.0`
 * IntelMausi.kext `1.0.3`
 * NVMeFix.kext `1.0.2`
-* FakePCIID.kext (from RehabMan)
-* FakePCIID_Intel_HDMI_Audio.kext (from RehabMan)
+* FakePCIID.kext (from RehabMan `2018-1027`)
+* FakePCIID_Intel_HDMI_Audio.kext (from RehabMan `2018-1027`)
 * FakePCIID_intel_I225-V.kext (from SchmockLord)
 
 ## Credits
