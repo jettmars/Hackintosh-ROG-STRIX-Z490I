@@ -39,7 +39,7 @@ Anyone has the same board can use the EFI folder directly except the `EFI/OC/con
 
 **iGPU Intel UHD630**
 
-Just use the default config from OpenCore Desktop Guide.
+HDMI display output is working, didn't test DP and monitor audio yet. Since the system audio is fixed, I think monitor audio will work too.
 
 DeviceProperties: 
 
@@ -51,13 +51,14 @@ DeviceProperties:
     <key>framebuffer-patch-enable</key>
     <data>AQAAAA==</data>
     <key>framebuffer-stolenmem</key>
-    <data>AAAwAQ==</data>
+    <data>AAAAQA==</data>
+    <key>device-id</key>
+    <data>mz4AAA==</data>
 </dict>
 ```
 
-HDMI display output is working, didn't test DP and monitor audio yet. Since the system audio is fixed, I think monitor audio will work too. Sadly, I found some software will panic when using iGPU HDMI, such as `System Preference -> Users&Groups` and `Wechat`, I don't knonw what's wrong and didn't do much test yet.
 
-**dGPU AMD Radeon VII**, natively supported, everything is fine.
+**dGPU AMD Radeon VII**, natively supported.
 
 <img src="assets/iGPU.png" width="500" alt="iGPU"/>
 <img src="assets/dGPU.png" width="500" alt="dGPU"/>
@@ -117,6 +118,10 @@ The bluetooth can not be recognized by default, because it uses an onboard USB2.
 Actually I've done the USB mapping, but not perfect yet. I'm a little confused about the result. I followed the [USB Mapping Guide](https://dortania.github.io/USB-Map-Guide/) step by step, and got the `USBMap.kext`, but after reboot, the port name is not exactly the same as before the mapping. I'll keep trying.
 
 For now, I’m sure the onboard USB2.0 port which bluetooth use is `HS13`, I mapped it to USB2.0 type to make bluetooth work. What I'm also confused is this port has the name `HS11` in windows, but there's no `HS11` in macOS, and the USB2.0 port on the IO panel also share the name `HS13`🤔. Can anyone explain to me ?
+
+### BIOS
+
+Version: 0607
 
 ## EFI
 
