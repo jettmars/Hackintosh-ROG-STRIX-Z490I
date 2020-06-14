@@ -60,9 +60,6 @@ DeviceProperties:
 
 **dGPU AMD Radeon VII**, natively supported.
 
-<img src="assets/iGPU.png" width="500" alt="iGPU"/>
-<img src="assets/dGPU.png" width="500" alt="dGPU"/>
-
 ### Audio
 
 Working by:
@@ -149,6 +146,15 @@ All kexts with version tag are downloaded from original repositories.
 * FakePCIID.kext (from RehabMan `2018-1027`)
 * FakePCIID_Intel_HDMI_Audio.kext (from RehabMan `2018-1027`)
 * FakePCIID_intel_I225-V.kext (from SchmockLord)
+
+## Screenshots
+
+<img src="assets/iGPU.png" width="500" alt="iGPU"/>
+<img src="assets/dGPU.png" width="500" alt="dGPU"/>
+<img src="assets/videoproc.png" width="500" alt="videoproc"/>
+<img src="assets/cpu-geekbench.png" width="500" alt="cpu-geekbench"/>
+<img src="assets/cpu-benchmark.png" width="500" alt="cpu-benchmark"/>
+<img src="assets/IPG-Maximum-Frequency-test.png" width="500" alt="cpu-test"/>
 
 ## Credits
 
