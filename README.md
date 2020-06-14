@@ -2,7 +2,7 @@
 
 This repository is about hackintosh on **Asus ROG STRIZX Z490I**. 
 
-**The project is not completely finished yet and a lot of functional test need to be done**, I'v done the basic installation, still working on it since it's not perfect yet. I'm no expert in hackintosh, so this project won't be finished so fast, if someone is interested in this project, your're welcomed to join me.
+**The project is not completely finished yet and a lot of functional test need to be done**, I'v done the basic installation, still working on it since it's not perfect yet. I'm no expert in hackintosh, and I'm not gonna to put plenty of extra SSDTs and kexts from other repos to make the system looks like everything is fine, so this project won't be finished so fast, if someone is interested in this project, your're welcomed to join me.
 
 Anyone has the same board can use the EFI folder directly except the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start, and try to build step by step yourself.
 
