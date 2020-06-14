@@ -39,7 +39,7 @@ Anyone has the same board can use the EFI folder directly except the `EFI/OC/con
 
 **iGPU Intel UHD630**
 
-HDMI display output is working, didn't test DP and monitor audio yet. Since the system audio is fixed, I think monitor audio will work too.
+HDMI display output is working, didn't test DP yet since I don't have a DP cable.
 
 DeviceProperties: 
 
