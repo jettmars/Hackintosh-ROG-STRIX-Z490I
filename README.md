@@ -24,7 +24,7 @@ Anyone has the same board can use the EFI folder directly except the `EFI/OC/con
 
 ## What's working
 
-- [x] Intel UHD630 (iGPU), not perfect
+- [x] Intel UHD630 (iGPU)
 - [x] AMD Radeon VII (dGPU)
 - [x] Audio Realtek ALCS1220A
 - [x] Intel I225-V 2.5Gb Ethernet
