@@ -37,9 +37,9 @@ Anyone has the same board can use the EFI folder directly except the `EFI/OC/con
 
 ### GPU
 
-**iGPU Intel UHD630**
+#### iGPU Intel UHD630
 
-HDMI display output is working, didn't test DP yet since I don't have a DP cable.
+HDMI display output is working fine, didn't test DP yet since I don't have a DP cable.
 
 DeviceProperties: 
 
@@ -57,8 +57,9 @@ DeviceProperties:
 </dict>
 ```
 
+#### dGPU AMD Radeon VII
 
-**dGPU AMD Radeon VII**, natively supported.
+Natively supported, no additional configuration.
 
 ### Audio
 
@@ -120,9 +121,9 @@ For now, I’m sure the onboard USB2.0 port which bluetooth use is `HS13`, I map
 
 Version: 0607
 
-## EFI
+### EFI
 
-### SSDTs
+#### SSDTs
 
 Compiled by following the [ACPI Guide](https://dortania.github.io/Getting-Started-With-ACPI/), the `.dls` SSDT files can be found in SSDTS folder. According to the guide, SSDT-PMC is used for NVRAM support, but desktop Z490 boards **DO NOT** need it, so it's not included in ACPI. 
 
@@ -131,7 +132,7 @@ Compiled by following the [ACPI Guide](https://dortania.github.io/Getting-Starte
 * SSDT-PLUG.aml
 * SSDT-SBUS-MCHC.aml
 
-### Kexts
+#### Kexts
 
 All kexts with version tag are downloaded from original repositories.
 
