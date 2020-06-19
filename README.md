@@ -113,7 +113,7 @@ The bluetooth can not be recognized by default, because it uses an onboard USB2.
 
 ### USB
 
-Rear panel USB works perfect now, and the 9-pin onboard USB2.0 which blutooth uses is ok too. Details on the way...
+Rear panel USB works perfect now, and the 9-pin onboard USB2.0 which blutooth uses is ok too. Wakeup needs to be fixed. Details on the way...
 
 ### BIOS
 
