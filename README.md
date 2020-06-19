@@ -149,12 +149,12 @@ All kexts with version tag are downloaded from original repositories.
 
 ## Misc
 
-### benchmarks
+### Benchmarks
 
-[Geekbench 5 CPU Score](https://browser.geekbench.com/v5/cpu/2603659)
-[Geekbench 5 iGPU OpenCL Score](https://browser.geekbench.com/v5/compute/1092240)
+* [Geekbench 5 CPU Score](https://browser.geekbench.com/v5/cpu/2603659)
+* [Geekbench 5 iGPU OpenCL Score](https://browser.geekbench.com/v5/compute/1092240)
 
-### screenshots
+### Screenshots
 
 <img src="assets/iGPU.png" width="500" alt="iGPU"/>
 <img src="assets/dGPU.png" width="500" alt="dGPU"/>
