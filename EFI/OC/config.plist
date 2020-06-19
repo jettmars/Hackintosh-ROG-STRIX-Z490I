@@ -233,6 +233,11 @@
 				<key>device-id</key>
 				<data>cJ0AAA==</data>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
+			<dict>
+				<key>acpi-wake-type</key>
+				<data>AQ==</data>
+			</dict>
 		</dict>
 		<key>Delete</key>
 		<dict/>
@@ -431,7 +436,7 @@
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>BundlePath</key>
-				<string>USBMap.kext</string>
+				<string>USBPorts.kext</string>
 			</dict>
 		</array>
 		<key>Block</key>
@@ -820,7 +825,7 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>Paste your Board Serial Number here</string>
+			<string>C02041405GULNV9FB</string>
 			<key>ROM</key>
 			<data>ESIzRFVm</data>
 			<key>SpoofVendor</key>
@@ -828,9 +833,9 @@
 			<key>SystemProductName</key>
 			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>Paste your Serial Number here</string>
+			<string>C02DJ079JV3Q</string>
 			<key>SystemUUID</key>
-			<string>Paste your SMUUID here Number</string>
+			<string>B33A190E-671F-4918-AFC1-94376329E98F</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>

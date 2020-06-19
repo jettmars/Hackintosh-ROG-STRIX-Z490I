@@ -29,7 +29,7 @@ Anyone has the same board can use the EFI folder directly except the `EFI/OC/con
 - [x] Audio Realtek ALCS1220A
 - [x] Intel I225-V 2.5Gb Ethernet
 - [x] Wi-Fi/BT (BCM94360CS)
-- [ ] USB, mapping need to be fixed
+- [x] USB, front panel usb ports need mapping
 - [ ] Sleep/Wake
 - [x] Reboot/Shutdown
 
@@ -113,9 +113,7 @@ The bluetooth can not be recognized by default, because it uses an onboard USB2.
 
 ### USB
 
-Actually I've done the USB mapping, but not perfect yet. I'm a little confused about the result. I followed the [USB Mapping Guide](https://dortania.github.io/USB-Map-Guide/) step by step, and got the `USBMap.kext`, but after reboot, the port name is not exactly the same as before the mapping. I'll keep trying.
-
-For now, I’m sure the onboard USB2.0 port which bluetooth use is `HS13`, I mapped it to USB2.0 type to make bluetooth work. What I'm also confused is this port has the name `HS11` in windows, but there's no `HS11` in macOS, and the USB2.0 port on the IO panel also share the name `HS13`🤔. Can anyone explain to me ?
+Rear panel USB works perfect now, and the 9-pin onboard USB2.0 which blutooth uses is ok too. Details on the way...
 
 ### BIOS
 
@@ -147,14 +145,20 @@ All kexts with version tag are downloaded from original repositories.
 * FakePCIID.kext (from RehabMan `2018-1027`)
 * FakePCIID_Intel_HDMI_Audio.kext (from RehabMan `2018-1027`)
 * FakePCIID_intel_I225-V.kext (from SchmockLord)
+* USBPorts.kext (exported by hackintool)
 
-## Screenshots
+## Misc
+
+### benchmarks
+
+[Geekbench 5 CPU Score](https://browser.geekbench.com/v5/cpu/2603659)
+[Geekbench 5 iGPU OpenCL Score](https://browser.geekbench.com/v5/compute/1092240)
+
+### screenshots
 
 <img src="assets/iGPU.png" width="500" alt="iGPU"/>
 <img src="assets/dGPU.png" width="500" alt="dGPU"/>
 <img src="assets/videoproc.png" width="500" alt="videoproc"/>
-<img src="assets/cpu-geekbench.png" width="500" alt="cpu-geekbench"/>
-<img src="assets/cpu-benchmark.png" width="500" alt="cpu-benchmark"/>
 <img src="assets/IPG-Maximum-Frequency-test.png" width="500" alt="cpu-test"/>
 
 ## Credits
