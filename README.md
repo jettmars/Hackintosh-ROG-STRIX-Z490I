@@ -152,7 +152,7 @@ USB Ports:
 
 Here's my choice:
 
-<img src="assets/usb-ports.png" width="500" alt="usb-ports"/>
+<img src="assets/usb-ports.png" width="500" style="border-radius:10px" alt="usb-ports"/>
 
 ### F1 Boot Error
 
@@ -252,10 +252,10 @@ All kexts with version tag are downloaded from original repositories.
 
 ### Screenshots
 
-<img src="assets/iGPU.png" width="500" alt="iGPU"/>
-<img src="assets/dGPU.png" width="500" alt="dGPU"/>
-<img src="assets/videoproc.png" width="500" alt="videoproc"/>
-<img src="assets/IPG-Maximum-Frequency-test.png" width="500" alt="cpu-test"/>
+<img src="assets/iGPU.png" width="500" style="border-radius:10px" alt="iGPU"/>
+<img src="assets/dGPU.png" width="500" style="border-radius:10px" alt="dGPU"/>
+<img src="assets/videoproc.png" width="500" style="border-radius:10px" alt="videoproc"/>
+<img src="assets/IPG-Maximum-Frequency-test.png" style="border-radius:10px" width="500" alt="cpu-test"/>
 
 ## Credits
 
