@@ -2,7 +2,7 @@
 
 This repository is about hackintosh on **Asus ROG STRIZX Z490I**. 
 
-**This project is not completely finished yet and a lot of functional test need to be done**, I'v done the basic installation, still working on it since it's not perfect yet. I'm no expert in hackintosh, so this project won't be finished so fast, if someone is interested in this project, your're welcomed to join me.
+**This project is not completely finished yet and a lot of functional test need to be done**, I'v done the basic installation, still working on it since it's not perfect yet. I'm no expert in hackintosh, so this project won't be finished so fast.
 
 Anyone has the same board can use the EFI folder directly except the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start, and try to build step by step yourself.
 
@@ -139,21 +139,41 @@ USB Ports:
 | 6   | USB 3.2 Gen 2 | HS06/SS06 |
 | 7   | USB 3.2 Gen 2 | HS03/SS03 |
 | 8   | USB 3.2 Gen 2 | HS04/SS04 |
-| 9   | USB 2.0 | HS11 |
+| 9   | USB 2.0 Hub | HS11 |
 | 10  | USB 3.2 Gen 2 | HS01/SS01 |
 | 11  | USB 3.2 Gen 1 | HS07/SS07 + HS08/SS08 |
 
-> SS04,HS01/SS01,HS07/SS07,HS08/SS08 are not tested.
+> All ports: HS01 ~ HS14, SS01 ~ SS10, USR1 ~ USR2
+>
+> HS02: AURA LED Controller /  HS14: Onboard bluetooth
+>
+> SS04, HS01/SS01, HS07/SS07, HS08/SS08 are not tested yet.
+
 
 Here's my choice:
 
 <img src="assets/usb-ports.png" width="500" alt="usb-ports"/>
 
-> It’s weird that `HS11` does not appear in macOS by default. I got this port name in windows, and after exporting `USBPorts.kext` by hackintool, I added this port to the `info.plist` file in `USBPorts.kext` package manually.
-
 ### BIOS
 
-Version: 0607
+> Version: 0607
+
+#### Disable
+
+* Fast Boot
+* VT-d
+* CSM
+* Intel SGX
+* CFG Lock (no option in BIOS, Asus Z490 motherboards are factory unlocked. The `AppleCpuPmCfgLock` and `AppleXcpmCfgLock` quirks are not necessary)
+
+#### Enable
+
+* VT-x (no option in BIOS, it's enabled by default)
+* Above 4G decoding
+* Hyper-Threading
+* EHCI/XHCI Hand-off
+* OS type: Windows UEFI Mode (Clear Secure Boot Keys or choose `Other` type)
+* DVMT Pre-Allocated(iGPU Memory): 64MB
 
 ### EFI
 
@@ -183,6 +203,7 @@ All kexts with version tag are downloaded from original repositories.
 * FakePCIID_Intel_HDMI_Audio.kext (from RehabMan `2018-1027`)
 * FakePCIID_intel_I225-V.kext (from SchmockLord)
 * USBPorts.kext (exported by hackintool)
+* USBPorts-All (disabled, include all ports of this board)
 
 ## Misc
 
