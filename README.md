@@ -14,8 +14,6 @@ Anyone has the same board can use the EFI folder directly except the `EFI/OC/con
     * Audio: Realtek ALCS1220A
 * CPU: Intel i7-10700/10700k
 * GPU: Intel UHD630 / AMD Radeon VII
-* RAM: Corsair Vengeance LPX DDR4 3200 32GB
-* Drive: Samsung 970 EVO Plus
 
 ## Software
 
@@ -30,8 +28,9 @@ Anyone has the same board can use the EFI folder directly except the `EFI/OC/con
 - [x] Intel I225-V 2.5Gb Ethernet
 - [x] Wi-Fi/BT (BCM94360CS)
 - [x] USB
-- [ ] Sleep/Wake
 - [x] Restart/Shutdown
+- [x] Power Management (natively supported)
+- [ ] Sleep/Wake (stucked, just can't wake)
 
 ## Details
 
