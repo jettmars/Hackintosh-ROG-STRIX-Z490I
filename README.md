@@ -4,7 +4,7 @@ This repository is about hackintosh on **Asus ROG STRIZX Z490I**.
 
 **This project is not completely finished yet and a lot of functional test need to be done**, I'v done the basic installation, still working on it since it's not perfect yet. I'm no expert in hackintosh, so this project won't be finished so fast, if someone is interested in this project, your're welcomed to join me.
 
-Anyone has the same board can use the EFI folder directly except the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start, and try to build step by step yourself.
+Anyone has the same board can use the EFI folder directly except the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start, and try to build step by step yourself.
 
 ## Hardware
 
@@ -37,7 +37,7 @@ Anyone has the same board can use the EFI folder directly except the `EFI/OC/con
 
 ### GPU
 
-#### iGPU Intel UHD630
+#### Intel UHD630
 
 HDMI/DP display and audio output are working fine.
 
@@ -62,7 +62,7 @@ DeviceProperties:
 </dict>
 ```
 
-#### dGPU AMD Radeon VII
+#### AMD Radeon VII
 
 Natively supported, no additional configuration.
 
@@ -159,12 +159,13 @@ Version: 0607
 
 #### SSDTs
 
-Compiled by following the [ACPI Guide](https://dortania.github.io/Getting-Started-With-ACPI/), the `.dls` SSDT files can be found in SSDTS folder. 
+Compiled by following the [Dortania's ACPI Guide](https://dortania.github.io/Getting-Started-With-ACPI/), the `.dls` SSDT files can be found in SSDTS folder. 
 
 * SSDT-AWAC.aml
 * SSDT-EC-USBX.aml
 * SSDT-PLUG.aml
 * SSDT-SBUS-MCHC.aml
+* SSDT-RHUB.aml
 
 #### Kexts
 
