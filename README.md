@@ -143,11 +143,13 @@ USB Ports:
 | 10  | USB 3.2 Gen 2 | HS01/SS01 |
 | 11  | USB 3.2 Gen 1 | HS07/SS07 + HS08/SS08 |
 
+> SS04,HS01/SS01,HS07/SS07,HS08/SS08 are not tested.
+
 Here's my choice:
 
 <img src="assets/usb-ports.png" width="500" alt="usb-ports"/>
 
-> It’s weird that `HS11` does not appear in macOS by default. I found this port name in windows, and after exported `USBPorts.kext` by hackintool, I added this port to the `info.plist` file in `USBPorts.kext` package manually.
+> It’s weird that `HS11` does not appear in macOS by default. I got this port name in windows, and after exporting `USBPorts.kext` by hackintool, I added this port to the `info.plist` file in `USBPorts.kext` package manually.
 
 ### BIOS
 
@@ -185,9 +187,11 @@ All kexts with version tag are downloaded from original repositories.
 
 ### Benchmarks
 
-* [Geekbench 5 CPU Score](https://browser.geekbench.com/v5/cpu/2603659)
-* [Geekbench 5 iGPU OpenCL Score](https://browser.geekbench.com/v5/compute/1092240)
-* [Geekbench 5 dGPU OpenCL Score](https://browser.geekbench.com/v5/compute/1094575)
+| Item | Score |
+|---|---|
+| [CPU - Geekbench](https://browser.geekbench.com/v5/cpu/2603659) | Single/Multi-Core: 1212/8023 |
+| [Intel UHD630 - Geekbench](https://browser.geekbench.com/v5/compute/1092240) | OpenCL: 4826 |
+| [AMD Radeon VII - Geekbench](https://browser.geekbench.com/v5/compute/1094575) | OpenCL: 49549 |
 
 ### Screenshots
 
