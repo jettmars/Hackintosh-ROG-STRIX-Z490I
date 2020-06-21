@@ -4,7 +4,7 @@ This repository is about hackintosh on **Asus ROG STRIX Z490I**.
 
 Anyone has the same board can use my EFI directly. The EFI folder uses debug version of OpenCore, It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start.
 
-**This project is not completely finished since it's not perfect yet, and I'm no expert in hackintosh, so it won't be finished soon**
+This project is not completely finished since it's not perfect yet, and I'm no expert in hackintosh, so it won't be finished soon.
 
 ## Hardware
 
@@ -30,7 +30,7 @@ Anyone has the same board can use my EFI directly. The EFI folder uses debug ver
 - [x] USB
 - [x] Restart/Shutdown
 - [x] Power Management (natively supported)
-- [ ] Sleep/Wake (just can't wake as expected)
+- [ ] **Sleep/Wake (just can't wake, if someone knows how to fix it, email me please.)**
 
 ## Details
 
