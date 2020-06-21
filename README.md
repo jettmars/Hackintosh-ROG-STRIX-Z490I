@@ -260,4 +260,3 @@ All kexts with version tag are downloaded from original repositories.
 
 * [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/)
 * [SchmockLord's build on Gigabyte Z490-D](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
-* [yilmazca's build on Asus Prime Z490-A](https://github.com/yilmazca/intel-i9-10900K-Asus-prime-Z490A-hackintosh)
