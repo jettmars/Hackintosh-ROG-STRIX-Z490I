@@ -1,6 +1,6 @@
 # Hackintosh-ROG-STRIX-Z490I
 
-This repository is about hackintosh on **Asus ROG STRIZX Z490I**. 
+This repository is about hackintosh on **Asus ROG STRIX Z490I**. 
 
 Anyone has the same board can use my EFI directly. The EFI folder uses debug version of OpenCore, It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start.
 
