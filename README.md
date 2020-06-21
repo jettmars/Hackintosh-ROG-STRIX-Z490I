@@ -2,9 +2,9 @@
 
 This repository is about hackintosh on **Asus ROG STRIZX Z490I**. 
 
-**This project is not completely finished yet and a lot of functional test need to be done**, I'v done the basic installation, still working on it since it's not perfect yet. I'm no expert in hackintosh, so this project won't be finished so fast.
+Anyone has the same board can use my EFI directly. The EFI folder uses debug version of OpenCore, It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start.
 
-Anyone has the same board can use the EFI folder directly except the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start, and try to build step by step yourself.
+**This project is not completely finished since it's not perfect yet, and I'm no expert in hackintosh, so it won't be finished soon**
 
 ## Hardware
 
@@ -30,7 +30,7 @@ Anyone has the same board can use the EFI folder directly except the `EFI/OC/con
 - [x] USB
 - [x] Restart/Shutdown
 - [x] Power Management (natively supported)
-- [ ] Sleep/Wake (stucked, just can't wake)
+- [ ] Sleep/Wake (just can't wake as expected)
 
 ## Details
 
