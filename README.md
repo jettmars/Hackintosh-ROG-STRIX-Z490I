@@ -30,7 +30,7 @@ This project is not completely finished since it's not perfect yet, and I'm no e
 - [x] USB
 - [x] Restart/Shutdown
 - [x] Power Management (natively supported)
-- [ ] **Sleep/Wake (just can't wake, if someone knows how to fix it, email me please.)**
+- [ ] **Sleep/Wake (just can't wake)**
 
 ## Details
 
