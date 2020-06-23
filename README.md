@@ -1,6 +1,6 @@
 # Hackintosh-ROG-STRIX-Z490I
 
-This repository is about hackintosh on **Asus ROG STRIX Z490I**. For now, all the hardware is working as expected and it's reday for daily usage. Next I will start to try the dual boot of windows and I‘ll keep on update with OpenCore and macOS.
+This repository is about hackintosh on **Asus ROG STRIX Z490I**. For now, all the hardware is working as expected, it's ready for daily usage and I will continue to follow the updates of OpenCore and macOS.
 
 Anyone has the same board can use my EFI directly. The EFI folder uses debug version of OpenCore, It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start.
 
