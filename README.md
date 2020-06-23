@@ -1,10 +1,8 @@
 # Hackintosh-ROG-STRIX-Z490I
 
-This repository is about hackintosh on **Asus ROG STRIX Z490I**. 
+This repository is about hackintosh on **Asus ROG STRIX Z490I**. For now, all the hardware is working as expected and it's reday for daily usage. I‘ll keep on update with OpenCore and macOS.
 
 Anyone has the same board can use my EFI directly. The EFI folder uses debug version of OpenCore, It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start.
-
-This project is not completely finished since it's not perfect yet, and I'm no expert in hackintosh, so it won't be finished soon.
 
 ## Hardware
 
@@ -29,8 +27,8 @@ This project is not completely finished since it's not perfect yet, and I'm no e
 - [x] Wi-Fi/BT (BCM94360CS)
 - [x] USB
 - [x] Restart/Shutdown
-- [x] Power Management (natively supported)
-- [ ] **Sleep/Wake (just can't wake)**
+- [x] Sleep/Wake
+- [x] Power Management (Native support)
 
 ## Details
 
@@ -63,7 +61,7 @@ DeviceProperties:
 
 #### AMD Radeon VII
 
-Natively supported, no additional configuration.
+Native support, no additional configuration.
 
 ### Audio
 
@@ -153,6 +151,17 @@ Here's my choice:
 
 <img src="assets/usb-ports.png" width="500" alt="usb-ports"/>
 
+### Sleep/Wake
+
+Works with DP output and power button. GPRW Patch is used in order to disable USB device instant wake.
+
+**knowing issues:**
+1. Bluetooth has a delay of about 7 seconds after the display is turned on.
+2. When using HDMI, the display cannot be woken up.
+3. Without enabling GPRW, keyboard press or mouse click can wake up the display as well, but a second press or click is needed when the light is on, I tried fix it by following [Keyboard Wake Issues Guide](https://dortania.github.io/USB-Map-Guide/misc/keyboard.html), but didn't work. So my choice is just use the power button, disable `ACPI/SSDT-GPRW.aml` if you want to use keyboard or mouse for wake up.
+
+> Didn't test dGPU yet.
+
 ### F1 Boot Error
 
 Add patch to `Kernel -> Patch`:
@@ -220,6 +229,7 @@ Compiled by following the [Dortania's ACPI Guide](https://dortania.github.io/Get
 * SSDT-PLUG.aml
 * SSDT-SBUS-MCHC.aml
 * SSDT-RHUB.aml
+* SSDT-GPRW.aml (prebuild)
 
 #### Kexts
 
@@ -237,7 +247,7 @@ All kexts with version tag are downloaded from original repositories.
 * FakePCIID_Intel_HDMI_Audio.kext (from RehabMan `2018-1027`)
 * FakePCIID_intel_I225-V.kext (from SchmockLord)
 * USBPorts.kext (exported by hackintool)
-* USBPorts-All (disabled, include all ports of this board)
+* USBPorts-All.kext (disabled, include all ports of this board)
 
 ## Misc
 
