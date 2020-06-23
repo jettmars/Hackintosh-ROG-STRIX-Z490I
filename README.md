@@ -155,7 +155,7 @@ Here's my choice:
 
 Works with DP output and power button. GPRW Patch is used in order to disable USB device instant wake.
 
-**knowing issues:**
+**Known issues:**
 1. Bluetooth has a delay of about 7 seconds after the display is turned on.
 2. When using HDMI, the display cannot be woken up.
 3. Without enabling GPRW, keyboard press or mouse click can wake up the display as well, but a second press or click is needed when the light is on, I tried fix it by following [Keyboard Wake Issues Guide](https://dortania.github.io/USB-Map-Guide/misc/keyboard.html), but didn't work. So my choice is just use the power button, disable `ACPI/SSDT-GPRW.aml` if you want to use keyboard or mouse for wake up.
