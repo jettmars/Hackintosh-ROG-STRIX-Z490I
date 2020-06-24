@@ -2,7 +2,7 @@
 
 This repository is about hackintosh on **Asus ROG STRIX Z490I**. For now, all the hardware is working as expected, it's ready for daily usage and I will continue to follow the updates of OpenCore and macOS.
 
-Anyone has the same board can use my EFI directly. The EFI folder uses debug version of OpenCore, It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before start.
+Anyone who has the same board can use my EFI directly. The EFI folder uses debug version of OpenCore, It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before you start.
 
 ## Hardware
 
@@ -107,14 +107,14 @@ DeviceProperties:
 
 ### Wi-Fi/BT
 
-Working by using a m.2 B+M-Key adapter with Apple Airport Card BCM94360CS. It's natively supported, airdrop, handoff and sidecar are working perfectly. The bottom side m.2 slot for SSD is occupied and the bottom SSD heat sink must be abandoned.
+Working by using an m.2 B+M-Key adapter with Apple Airport Card BCM94360CS. It's natively supported, airdrop, handoff, and sidecar are working perfectly. The bottom side m.2 slot for SSD is occupied and the bottom SSD heat sink must be abandoned.
 
-The bluetooth can not be recognized by default, it uses the onboard 9-pin USB2.0 port for power supply, so USB mapping should be fixed to make it work.
+The Bluetooth can not be recognized by default, it uses the onboard 9-pin USB2.0 port for power supply, so USB mapping should be fixed to make it work.
 
 <img src="assets/wifi-bt.png" width="500" alt="wifi-bt"/>
 
 
-> The onboard wireless network card Intel AX201NGW uses m.2 E-Key slot and CNVi protocol. I tried replace it with a m.2 A-Key BCM94352Z card, the slot is compatible but it didn't work even in windows, thanks to the CNVi thing 😓. So don't try to replace the onboard card.
+> The onboard wireless network card Intel AX201NGW uses m.2 E-Key slot and CNVi protocol. I tried to replace it with an m.2 A-Key BCM94352Z card, the slot is compatible but it didn't work even in windows, thanks to the CNVi thing 😓. So don't try to replace the onboard card.
 
 
 ### USB
@@ -153,14 +153,14 @@ Here's my choice:
 
 ### Sleep/Wake
 
-Works with DP output and power button. GPRW Patch is used in order to disable USB device instant wake.
+Works with DP output and power button. GPRW Patch is used to disabling the USB device instant wake.
 
 **Known issues:**
 1. Bluetooth has a delay of about 7 seconds after the display is turned on.
 2. When using HDMI, the display cannot be woken up.
-3. Without enabling GPRW, keyboard press or mouse click can wake up the display as well, but a second press or click is needed when the light is on, I tried fix it by following [Keyboard Wake Issues Guide](https://dortania.github.io/USB-Map-Guide/misc/keyboard.html), but didn't work. So my choice is just use the power button, disable `ACPI/SSDT-GPRW.aml` if you want to use keyboard or mouse for wake up.
+3. Without enabling GPRW, a keyboard press or mouse click can wake up the display as well, but a second press or click is needed when the light is on, I tried to fix it by following [Keyboard Wake Issues Guide](https://dortania.github.io/USB-Map-Guide/misc/keyboard.html), but didn't work. So my choice is to just use the power button, disable `ACPI/SSDT-GPRW.aml` if you want to use a keyboard or mouse to wake up.
 
-> Didn't test dGPU yet.
+> dGPU has not been tested.
 
 ### F1 Boot Error
 
@@ -233,7 +233,7 @@ Compiled by following the [Dortania's ACPI Guide](https://dortania.github.io/Get
 
 #### Kexts
 
-All kexts with version tag are downloaded from original repositories.
+All kexts with a version tag are downloaded from original repositories.
 
 * VirtualSMC.kext `1.1.4`
 * SMCProcessor.kext `1.1.4`
@@ -248,10 +248,6 @@ All kexts with version tag are downloaded from original repositories.
 * FakePCIID_intel_I225-V.kext (from SchmockLord)
 * USBPorts.kext (exported by hackintool)
 * USBPorts-All.kext (disabled, include all ports of this board)
-
-## TODO
-
-
 
 ## Misc
 
