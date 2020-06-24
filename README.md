@@ -243,6 +243,7 @@ All kexts with a version tag are downloaded from original repositories.
 * AppleALC.kext `1.5.0`
 * IntelMausi.kext `1.0.3`
 * NVMeFix.kext `1.0.2`
+* RadeonBoost.kext `v1.6`
 * FakePCIID.kext (from RehabMan `2018-1027`)
 * FakePCIID_Intel_HDMI_Audio.kext (from RehabMan `2018-1027`)
 * FakePCIID_intel_I225-V.kext (from SchmockLord)
