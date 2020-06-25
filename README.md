@@ -160,7 +160,7 @@ Works with DP output and power button. GPRW Patch is used to disabling the USB d
 **Known issues:**
 1. Bluetooth has a delay of about 7 seconds after the display is turned on.
 2. When using HDMI, the display cannot be woken up.
-3. Without enabling GPRW, a keyboard press or mouse click can wake up the display as well, but a second press or click is needed when the light is on, I tried to fix it by following [Keyboard Wake Issues Guide](https://dortania.github.io/USB-Map-Guide/misc/keyboard.html), but didn't work. So my choice is to just use the power button, disable `ACPI/SSDT-GPRW.aml` if you want to use a keyboard or mouse to wake up.
+3. Without enabling GPRW, a keyboard press or mouse click can wake up the display as well, but a second press or click is needed when the light is on, I tried to fix it by following [Keyboard Wake Issues Guide](https://dortania.github.io/USB-Map-Guide/misc/keyboard.html), but didn't work. So my choice is to just use the power button, disable `SSDT-GPRW` if you want to use a keyboard or mouse to wake up.
 
 > dGPU has not been tested.
 
