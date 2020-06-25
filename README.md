@@ -256,9 +256,9 @@ All kexts with a version tag are downloaded from original repositories.
 
 | Item | Score |
 |---|---|
-| [CPU - Geekbench](https://browser.geekbench.com/v5/cpu/2603659) | Single/Multi-Core: 1212/8023 |
-| [Intel UHD630 - Geekbench](https://browser.geekbench.com/v5/compute/1092240) | OpenCL: 4826 |
-| [AMD Radeon VII - Geekbench](https://browser.geekbench.com/v5/compute/1094575) | OpenCL: 49549 |
+| CPU - Geekbench | [Single / Multi-Core](https://browser.geekbench.com/v5/cpu/2603659): 1212 / 8023 |
+| Intel UHD630 - Geekbench | [OpenCL](https://browser.geekbench.com/v5/compute/1092240) / [Metal](https://browser.geekbench.com/v5/compute/1120839): 4826 / 4790 |
+| AMD Radeon VII - Geekbench | [OpenCL](https://browser.geekbench.com/v5/compute/1121010) / [Metal](https://browser.geekbench.com/v5/compute/1121020): 75925 / 85089 |
 
 ### Screenshots
 
