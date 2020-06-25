@@ -147,7 +147,7 @@ USB Ports:
 > SS04, HS01/SS01, HS07/SS07, HS08/SS08 are not tested yet.
 
 
-Here's my choice:
+You can make your own mapping by hackintool, here's my choice:
 
 <img src="assets/usb-ports.png" width="500" alt="usb-ports"/>
 
