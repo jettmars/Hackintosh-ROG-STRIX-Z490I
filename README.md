@@ -12,12 +12,12 @@ Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.g
     * Ethernet: Intel I225-V 2.5Gbit
     * Wi-Fi/BT: Intel AX201NGW
     * Audio: Realtek ALCS1220A
-* CPU: Intel i7-10700/10700k
+* CPU: Intel i7-10700 / 10700k
 * GPU: Intel UHD630 / AMD Radeon VII
 
 ## Software
 
-* Bootloader: OpenCore 0.5.9-debug
+* Bootloader: OpenCore 0.5.9-DEBUG
 * OS: macOS Catalina 10.15.5 (19F96 / 2020-05-26)
 
 ## What's working
