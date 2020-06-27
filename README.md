@@ -256,40 +256,16 @@ All kexts with a version tag are downloaded from original repositories.
 
 ### Installation
 
-The installation guide in the [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) are quite clear and easy, so there will be no detailed installation tutorials here. Here is my recommended reading order for beginners, give it some patience and you can build your own EFI.
-
-* OpenCore Desktop Guide
-* Why OpenCore
-* USB CREATION
-    * Creating the USB
-    * Adding The Base OpenCore Files
-    * Gathering files
-    * Getting started with ACPI
-    * config.plist Setup
-* INTEL CONFIG.PLIST
-    * Comet Lake
-* INSTALLATION
-    * Installation Process
-* POST INSTALL
-    * Fixing Audio
-    * Booting without USB
-    * Updating OpenCore, kexts and macOS
-    * Fixing Resolution and Verbose
-    * Setting up Bootstrap.efi
-    * Installing BootCamp
-    * Fixing USB
-* EXTRAS
-    * Add GUI and Boot-chime
-    * Disabling unsupported GPUs
+The installation guide in the [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) are quite clear and easy, so there will be no detailed installation tutorials here. Give it some patience and you can build your own EFI.
 
 ### Tools
 
-* [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
-* [Hackintool](https://github.com/headkaze/Hackintool)
-* [MaciASL](https://github.com/acidanthera/MaciASL)
-* [MountEFI](https://github.com/corpnewt/MountEFI)
-* [PropereTree](https://github.com/corpnewt/ProperTree)
-* [SSDTTime](https://github.com/corpnewt/SSDTTime)
+* [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) for generating SMBIOS info
+* [Hackintool](https://github.com/headkaze/Hackintool) for a lot of things
+* [MaciASL](https://github.com/acidanthera/MaciASL) for compiling SSDTs
+* [MountEFI](https://github.com/corpnewt/MountEFI) for mounting EFI system partition
+* [PropereTree](https://github.com/corpnewt/ProperTree) for editing plist file
+* [SSDTTime](https://github.com/corpnewt/SSDTTime) for dumping DSDT
 
 ### Benchmarks
 
