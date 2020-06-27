@@ -287,4 +287,4 @@ The installation guide in the [OpenCore Desktop Guide](https://dortania.github.i
 * Acidanthera for [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
 * Dortania for [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/)
 * SchmockLord for [Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
-* Contributors to the hackintosh system
+* All contributors to the hackintosh system
