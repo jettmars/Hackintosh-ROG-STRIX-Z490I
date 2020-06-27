@@ -256,7 +256,7 @@ All kexts with a version tag are downloaded from original repositories.
 
 ### Installation
 
-The installation steps in the [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) are quite clear and easy, so there will be no detailed installation tutorials here. Here is my recommended reading order for beginners, give it some patience and you can build your own EFI.
+The installation guide in the [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) are quite clear and easy, so there will be no detailed installation tutorials here. Here is my recommended reading order for beginners, give it some patience and you can build your own EFI.
 
 * OpenCore Desktop Guide
 * Why OpenCore
