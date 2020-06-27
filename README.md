@@ -254,6 +254,43 @@ All kexts with a version tag are downloaded from original repositories.
 
 ## Misc
 
+### Installation
+
+The installation steps in the [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) are quite clear and easy, so there will be no detailed installation tutorials here. Here is my recommended reading order for beginners, give it some patience and you can build your own EFI.
+
+* OpenCore Desktop Guide
+* Why OpenCore
+* USB CREATION
+    * Creating the USB
+    * Adding The Base OpenCore Files
+    * Gathering files
+    * Getting started with ACPI
+    * config.plist Setup
+* INTEL CONFIG.PLIST
+    * Comet Lake
+* INSTALLATION
+    * Installation Process
+* POST INSTALL
+    * Fixing Audio
+    * Booting without USB
+    * Updating OpenCore, kexts and macOS
+    * Fixing Resolution and Verbose
+    * Setting up Bootstrap.efi
+    * Installing BootCamp
+    * Fixing USB
+* EXTRAS
+    * Add GUI and Boot-chime
+    * Disabling unsupported GPUs
+
+### Tools
+
+* [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
+* [Hackintool](https://github.com/headkaze/Hackintool)
+* [MaciASL](https://github.com/acidanthera/MaciASL)
+* [MountEFI](https://github.com/corpnewt/MountEFI)
+* [PropereTree](https://github.com/corpnewt/ProperTree)
+* [SSDTTime](https://github.com/corpnewt/SSDTTime)
+
 ### Benchmarks
 
 | Item | Score |
@@ -271,5 +308,7 @@ All kexts with a version tag are downloaded from original repositories.
 
 ## Credits
 
-* [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/)
-* [SchmockLord's build on Gigabyte Z490-D](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
+* Acidanthera for [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
+* Dortania for [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/)
+* SchmockLord for [Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
+* Contributors to the hackintosh system
