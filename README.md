@@ -14,6 +14,7 @@ Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.g
     * Audio: Realtek ALCS1220A
 * CPU: Intel i7-10700 / 10700k
 * GPU: Intel UHD630 / AMD Radeon VII
+* RAM: CORSAIR VENGEANCE LPX DDR4 3200 32GB(16G×2)
 
 ## Software
 
@@ -271,7 +272,7 @@ The installation guide in the [OpenCore Desktop Guide](https://dortania.github.i
 
 | Item | Score |
 |---|---|
-| CPU - Geekbench | [Single / Multi-Core](https://browser.geekbench.com/v5/cpu/2603659): 1212 / 8023 |
+| CPU - Geekbench | [Single / Multi-Core](https://browser.geekbench.com/v5/cpu/2750529): 1218 / 8909 |
 | Intel UHD630 - Geekbench | [OpenCL](https://browser.geekbench.com/v5/compute/1092240) / [Metal](https://browser.geekbench.com/v5/compute/1120839): 4826 / 4790 |
 | AMD Radeon VII - Geekbench | [OpenCL](https://browser.geekbench.com/v5/compute/1121010) / [Metal](https://browser.geekbench.com/v5/compute/1121020): 75925 / 85089 |
 
