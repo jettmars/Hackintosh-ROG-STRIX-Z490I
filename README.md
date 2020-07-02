@@ -279,8 +279,9 @@ The installation guide in the [OpenCore Desktop Guide](https://dortania.github.i
 ### Screenshots
 
 <img src="assets/iGPU.png" width="500" alt="iGPU"/>
-<img src="assets/dGPU.png" width="500" alt="dGPU"/>
 <img src="assets/videoproc.png" width="500" alt="videoproc"/>
+<img src="assets/dGPU.png" width="500" alt="dGPU"/>
+<img src="assets/videoproc-d.png" width="500" alt="videoproc-d"/>
 <img src="assets/IPG-Maximum-Frequency-test.png" width="500" alt="cpu-test"/>
 
 ## Credits
