@@ -2,9 +2,9 @@
 
 This repository is about hackintosh on **Asus ROG STRIX Z490I**. For now, all the hardware is working as expected, it's ready for daily usage and I will continue to follow the updates of OpenCore and macOS.
 
-Anyone who has the same board can use my EFI directly. The source EFI folder uses debug version of OpenCore, mainly used for installation and testing. It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). 
+Anyone who has the same board can use my EFI directly. The source EFI folder uses debug version of OpenCore, mainly used for installation and testing. It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo). 
 
-Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before you start.
+Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Install-Guide/) before you start.
 
 ## Hardware
 
@@ -287,6 +287,6 @@ The installation guide in the [OpenCore Desktop Guide](https://dortania.github.i
 ## Credits
 
 * Acidanthera for [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
-* Dortania for [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/)
+* Dortania for [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 * SchmockLord for [Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
 * All contributors to the hackintosh system
