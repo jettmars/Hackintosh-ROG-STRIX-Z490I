@@ -4,7 +4,7 @@ This repository is about hackintosh on **Asus ROG STRIX Z490I**. For now, all th
 
 Anyone who has the same board can use my EFI directly. The source EFI folder uses debug version of OpenCore, mainly used for installation and testing. It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo). 
 
-Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Install-Guide/) before you start.
+Highly recommended reading the whole [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) before you start.
 
 ## Hardware
 
@@ -257,7 +257,7 @@ All kexts with a version tag are downloaded from original repositories.
 
 ### Installation
 
-The installation guide in the [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) are quite clear and easy, so there will be no detailed installation tutorials here. Give it some patience and you can build your own EFI.
+The installation guide in the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) are quite clear and easy, so there will be no detailed installation tutorials here. Give it some patience and you can build your own EFI.
 
 ### Tools
 
@@ -287,6 +287,6 @@ The installation guide in the [OpenCore Desktop Guide](https://dortania.github.i
 ## Credits
 
 * Acidanthera for [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
-* Dortania for [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Install-Guide/)
+* Dortania for [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 * SchmockLord for [Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
 * All contributors to the hackintosh system
