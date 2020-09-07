@@ -18,7 +18,7 @@ Highly recommended reading the whole [OpenCore Install Guide](https://dortania.g
 
 ## Software
 
-* Bootloader: OpenCore 0.5.9-DEBUG
+* Bootloader: OpenCore 0.6.0-DEBUG
 * OS: macOS Catalina 10.15.5 (19F96 / 2020-05-26)
 
 ## What's working
@@ -163,8 +163,6 @@ Works with DP output and power button. GPRW Patch is used to disabling the USB d
 2. When using HDMI, the display cannot be woken up.
 3. Without enabling GPRW, a keyboard press or mouse click can wake up the display as well, but a second press or click is needed when the light is on, I tried to fix it by following [Keyboard Wake Issues Guide](https://dortania.github.io/USB-Map-Guide/misc/keyboard.html), but didn't work. So my choice is to just use the power button, disable `SSDT-GPRW` if you want to use a keyboard or mouse to wake up.
 
-> dGPU has not been tested.
-
 ### F1 Boot Error
 
 Add patch to `Kernel -> Patch`:
@@ -238,14 +236,14 @@ Compiled by following the [Dortania's ACPI Guide](https://dortania.github.io/Get
 
 All kexts with a version tag are downloaded from original repositories.
 
-* VirtualSMC.kext `1.1.4`
-* SMCProcessor.kext `1.1.4`
-* SMCSuperIO.kext `1.1.4`
-* Lilu.kext `1.4.5`
-* WhateverGreen.kext `1.4.0`
-* AppleALC.kext `1.5.0`
+* VirtualSMC.kext `1.1.5`
+* SMCProcessor.kext `1.1.5`
+* SMCSuperIO.kext `1.1.5`
+* Lilu.kext `1.4.6`
+* WhateverGreen.kext `1.4.1`
+* AppleALC.kext `1.5.1`
 * IntelMausi.kext `1.0.3`
-* NVMeFix.kext `1.0.2`
+* NVMeFix.kext `1.0.3`
 * RadeonBoost.kext `v1.6`
 * FakePCIID.kext (from RehabMan `2018-1027`)
 * FakePCIID_Intel_HDMI_Audio.kext (from RehabMan `2018-1027`)
