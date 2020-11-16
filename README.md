@@ -19,7 +19,7 @@ Highly recommended reading the whole [OpenCore Install Guide](https://dortania.g
 ## Software
 
 * Bootloader: OpenCore 0.6.3-DEBUG
-* OS: macOS Catalina 10.15.7 (19H15 / 2020-11-11)
+* OS: macOS Big Sur 11.0.1 (20B29 / 2020-11-12)
 
 ## What's working
 
