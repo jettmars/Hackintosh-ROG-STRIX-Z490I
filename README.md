@@ -2,7 +2,7 @@
 
 This repository is about hackintosh on **Asus ROG STRIX Z490I**. For now, all the hardware is working as expected, it's ready for daily usage and I will continue to follow the updates of OpenCore and macOS.
 
-Anyone who has the same board can use my EFI directly. The source EFI folder uses debug version of OpenCore, mainly used for installation and testing. It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo). 
+Anyone who has the same board can use my EFI directly. The source EFI folder uses debug version of OpenCore, mainly used for installation and testing. It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide #PlatformInfo](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html). 
 
 Highly recommended reading the whole [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) before you start.
 
@@ -10,16 +10,16 @@ Highly recommended reading the whole [OpenCore Install Guide](https://dortania.g
 
 * Motherboard: Asus ROG STRIX Z490-I
     * Ethernet: Intel I225-V 2.5Gbit
-    * Wi-Fi/BT: Intel AX201NGW
+    * Wi-Fi/BT: Intel AX201NGW (onboard) / BCM94360CS(M.2 Adapter)
     * Audio: Realtek ALCS1220A
-* CPU: Intel i7-10700 / 10700k
+* CPU: Intel i7-10700 / 10700K
 * GPU: Intel UHD630 / AMD Radeon VII
 * RAM: CORSAIR VENGEANCE LPX DDR4 3200 32GB(16G×2)
 
 ## Software
 
-* Bootloader: OpenCore 0.6.0-DEBUG
-* OS: macOS Catalina 10.15.5 (19F96 / 2020-05-26)
+* Bootloader: OpenCore 0.6.3-DEBUG
+* OS: macOS Catalina 10.15.7 (19H15 / 2020-11-11)
 
 ## What's working
 
@@ -46,6 +46,8 @@ Working by:
 * ig-platform-id = `07009B3E`
 * device-id = `9B3E0000`
 
+> use ig-platform-id = `0300C89B` when iGPU doesn't drive  display
+
 DeviceProperties: 
 
 ```xml
@@ -64,7 +66,7 @@ DeviceProperties:
 
 #### AMD Radeon VII
 
-Native support, no additional configuration.
+Native support, no additional configuration. Enable `Radeonboost.kext` to improve performance.
 
 ### Audio
 
@@ -236,14 +238,14 @@ Compiled by following the [Dortania's ACPI Guide](https://dortania.github.io/Get
 
 All kexts with a version tag are downloaded from original repositories.
 
-* VirtualSMC.kext `1.1.5`
-* SMCProcessor.kext `1.1.5`
-* SMCSuperIO.kext `1.1.5`
-* Lilu.kext `1.4.6`
-* WhateverGreen.kext `1.4.1`
-* AppleALC.kext `1.5.1`
-* IntelMausi.kext `1.0.3`
-* NVMeFix.kext `1.0.3`
+* VirtualSMC.kext `1.1.8`
+* SMCProcessor.kext `1.1.8`
+* SMCSuperIO.kext `1.1.8`
+* Lilu.kext `1.4.9`
+* WhateverGreen.kext `1.4.4`
+* AppleALC.kext `1.5.4`
+* IntelMausi.kext `1.0.4`
+* NVMeFix.kext `1.0.4`
 * RadeonBoost.kext `v1.6`
 * FakePCIID.kext (from RehabMan `2018-1027`)
 * FakePCIID_Intel_HDMI_Audio.kext (from RehabMan `2018-1027`)
@@ -259,12 +261,12 @@ The installation guide in the [OpenCore Install Guide](https://dortania.github.i
 
 ### Tools
 
-* [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) for generating SMBIOS info
-* [Hackintool](https://github.com/headkaze/Hackintool) for a lot of things
-* [MaciASL](https://github.com/acidanthera/MaciASL) for compiling SSDTs
-* [MountEFI](https://github.com/corpnewt/MountEFI) for mounting EFI system partition
-* [PropereTree](https://github.com/corpnewt/ProperTree) for editing plist file
-* [SSDTTime](https://github.com/corpnewt/SSDTTime) for dumping DSDT
+* Generating SMBIOS: [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
+* Compiling SSDT: [MaciASL](https://github.com/acidanthera/MaciASL)
+* Mounting EFI system partition: [MountEFI](https://github.com/corpnewt/MountEFI)
+* Editing plist file: [PropereTree](https://github.com/corpnewt/ProperTree)
+* Dumping DSDT: [SSDTTime](https://github.com/corpnewt/SSDTTime)
+* Toolbox: [Hackintool](https://github.com/headkaze/Hackintool)
 
 ### Benchmarks
 
@@ -284,7 +286,5 @@ The installation guide in the [OpenCore Install Guide](https://dortania.github.i
 
 ## Credits
 
-* Acidanthera for [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
-* Dortania for [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
-* SchmockLord for [Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
-* All contributors to the hackintosh system
+* [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
+* [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
