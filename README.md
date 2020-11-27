@@ -46,7 +46,7 @@ Working by:
 * ig-platform-id = `07009B3E`
 * device-id = `9B3E0000`
 
-> use ig-platform-id = `0300C89B` when iGPU doesn't drive  display
+> use ig-platform-id = `0300C89B` when iGPU doesn't drive display
 
 DeviceProperties: 
 
@@ -148,8 +148,6 @@ USB Ports:
 > All ports: HS01 ~ HS14, SS01 ~ SS10, USR1 ~ USR2
 >
 > HS02: AURA LED Controller /  HS14: Onboard bluetooth
->
-> SS04, HS01/SS01, HS07/SS07, HS08/SS08 are not tested yet.
 
 
 You can make your own mapping by hackintool, here's my choice:
