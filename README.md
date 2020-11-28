@@ -19,7 +19,7 @@ Highly recommended reading the whole [OpenCore Install Guide](https://dortania.g
 ## Software
 
 * Bootloader: OpenCore 0.6.3-DEBUG
-* OS: macOS Big Sur 11.0.1 (20B29 / 2020-11-12)
+* OS: macOS Big Sur 11.0.1 (20B29 / 2020-11-12 / iMac19,1)
 
 ## What's working
 
@@ -46,8 +46,6 @@ Working by:
 * ig-platform-id = `07009B3E`
 * device-id = `9B3E0000`
 
-> use ig-platform-id = `0300C89B` when iGPU doesn't drive display
-
 DeviceProperties: 
 
 ```xml
@@ -66,7 +64,7 @@ DeviceProperties:
 
 #### AMD Radeon VII
 
-Native support, no additional configuration. Enable `Radeonboost.kext` to improve performance.
+Native support, no additional configuration. Enable `Radeonboost.kext` to improve performance if needed.
 
 ### Audio
 
@@ -107,8 +105,6 @@ DeviceProperties:
     <data>8hUAAA==</data>
 </dict>
 ```
-
-`FakePCIID_Intel_I225-V.kext` is from **SchmockLord**'s repository, details in issue [2.5Gbit Ethernet (Intel I225-V) Don't work #8](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D/issues/8).
 
 ### Wi-Fi/BT
 
@@ -200,7 +196,7 @@ Add patch to `Kernel -> Patch`:
 
 ### BIOS
 
-> Version: 0607
+> Version: 0901
 
 #### Disable
 
