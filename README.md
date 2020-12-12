@@ -18,7 +18,7 @@ Highly recommended reading the whole [OpenCore Install Guide](https://dortania.g
 
 ## Software
 
-* Bootloader: OpenCore 0.6.3-DEBUG
+* Bootloader: OpenCore 0.6.4-DEBUG
 * OS: macOS Big Sur 11.0.1 (20B29 / 2020-11-12 / iMac19,1)
 
 ## What's working
@@ -71,9 +71,6 @@ Native support, no additional configuration. Enable `Radeonboost.kext` to improv
 Working by:
 
 * AppleALC.kext
-* FakePCIID.kext
-* FakePCIID_Intel_HDMI_Audio.kext
-* device-id=`709D0000`
 * layout-id=7
 
 DeviceProperties: 
@@ -83,8 +80,6 @@ DeviceProperties:
 <dict>
     <key>layout-id</key>
     <integer>7</integer>
-    <key>device-id</key>
-    <data>cJ0AAA==</data>
 </dict>
 ```
 
@@ -115,7 +110,7 @@ The Bluetooth can not be recognized by default, it uses the onboard 9-pin USB2.0
 <img src="assets/wifi-bt.png" width="500" alt="wifi-bt"/>
 
 
-> The onboard wireless network card Intel AX201NGW uses m.2 E-Key slot and CNVi protocol. I tried to replace it with an m.2 A-Key BCM94352Z card, the slot is compatible but it didn't work even in windows, thanks to the CNVi thing 😓. So don't try to replace the onboard card.
+> The onboard wireless network card Intel AX201NGW uses m.2 E-Key slot and CNVi protocol. I tried to replace it with an m.2 A-Key BCM94352Z card, the slot is compatible but it didn't work even in Windows, thanks to the CNVi thing 😓. So don't try to replace the onboard card.
 
 
 ### USB
@@ -154,7 +149,7 @@ You can make your own mapping by hackintool, here's my choice:
 
 Works with DP output and power button. GPRW Patch is used to disabling the USB device instant wake.
 
-**Known issues:**
+**Note:**
 1. Bluetooth has a delay of about 7 seconds after the display is turned on.
 2. When using HDMI, the display cannot be woken up.
 3. Without enabling GPRW, a keyboard press or mouse click can wake up the display as well, but a second press or click is needed when the light is on, I tried to fix it by following [Keyboard Wake Issues Guide](https://dortania.github.io/USB-Map-Guide/misc/keyboard.html), but didn't work. So my choice is to just use the power button, disable `SSDT-GPRW` if you want to use a keyboard or mouse to wake up.
@@ -232,20 +227,23 @@ Compiled by following the [Dortania's ACPI Guide](https://dortania.github.io/Get
 
 All kexts with a version tag are downloaded from original repositories.
 
-* VirtualSMC.kext `1.1.8`
-* SMCProcessor.kext `1.1.8`
-* SMCSuperIO.kext `1.1.8`
-* Lilu.kext `1.4.9`
-* WhateverGreen.kext `1.4.4`
-* AppleALC.kext `1.5.4`
-* IntelMausi.kext `1.0.4`
+* VirtualSMC.kext `1.1.9`
+* SMCProcessor.kext `1.1.9`
+* SMCSuperIO.kext `1.1.9`
+* Lilu.kext `1.5.0`
+* WhateverGreen.kext `1.4.5`
+* AppleALC.kext `1.5.5`
 * NVMeFix.kext `1.0.4`
 * RadeonBoost.kext `v1.6`
+* USBPorts.kext (exported by hackintool, for iMac19,1)
+* USBPorts-All.kext (disabled by default, include all ports of this board, for iMac19,1)
 * FakePCIID.kext (from RehabMan `2018-1027`)
+* FakePCIID_intel_I225-V.kext
+
+> Deprecated since release v1.2.2
+
+* IntelMausi.kext `1.0.4`
 * FakePCIID_Intel_HDMI_Audio.kext (from RehabMan `2018-1027`)
-* FakePCIID_intel_I225-V.kext (from SchmockLord)
-* USBPorts.kext (exported by hackintool)
-* USBPorts-All.kext (disabled, include all ports of this board)
 
 ## Misc
 
