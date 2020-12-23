@@ -53,13 +53,6 @@ DeviceProperties:
 <dict>
     <key>AAPL,ig-platform-id</key>
     <data>BwCbPg==</data>
-    <key>framebuffer-patch-enable</key>
-    <data>AQAAAA==</data>
-    <key>framebuffer-stolenmem</key>
-    <data>AAAAQA==</data>
-    <key>device-id</key>
-    <data>mz4AAA==</data>
-</dict>
 ```
 
 #### AMD Radeon VII
@@ -71,17 +64,7 @@ Native support, no additional configuration. Enable `Radeonboost.kext` to improv
 Working by:
 
 * AppleALC.kext
-* layout-id=7
-
-DeviceProperties: 
-
-```xml
-<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
-<dict>
-    <key>layout-id</key>
-    <integer>7</integer>
-</dict>
-```
+* alcid=7
 
 ### Ethernet 
 
@@ -154,40 +137,7 @@ Works with DP output and power button. GPRW Patch is used to disabling the USB d
 2. When using HDMI, the display cannot be woken up.
 3. Without enabling GPRW, a keyboard press or mouse click can wake up the display as well, but a second press or click is needed when the light is on, I tried to fix it by following [Keyboard Wake Issues Guide](https://dortania.github.io/USB-Map-Guide/misc/keyboard.html), but didn't work. So my choice is to just use the power button, disable `SSDT-GPRW` if you want to use a keyboard or mouse to wake up.
 
-### F1 Boot Error
 
-Add patch to `Kernel -> Patch`:
-
-```xml
-<dict>
-    <key>Base</key>
-    <string></string>
-    <key>Comment</key>
-    <string>F1 Startup patch</string>
-    <key>Count</key>
-    <integer>1</integer>
-    <key>Enabled</key>
-    <true/>
-    <key>Find</key>
-    <data>dTMPtw==</data>
-    <key>Identifier</key>
-    <string>com.apple.driver.AppleRTC</string>
-    <key>Limit</key>
-    <integer>0</integer>
-    <key>Mask</key>
-    <data></data>
-    <key>MaxKernel</key>
-    <string></string>
-    <key>MinKernel</key>
-    <string></string>
-    <key>Replace</key>
-    <data>6zMPtw==</data>
-    <key>ReplaceMask</key>
-    <data></data>
-    <key>Skip</key>
-    <integer>0</integer>
-</dict>
-```
 
 ### BIOS
 
@@ -196,7 +146,6 @@ Add patch to `Kernel -> Patch`:
 #### Disable
 
 * Fast Boot
-* VT-d
 * CSM
 * Intel SGX
 * CFG Lock (no option in BIOS, Asus Z490 motherboards are factory unlocked. The `AppleCpuPmCfgLock` and `AppleXcpmCfgLock` quirks are not necessary)
@@ -204,6 +153,7 @@ Add patch to `Kernel -> Patch`:
 #### Enable
 
 * VT-x (no option in BIOS, it's enabled by default)
+* VT-d (ensure to enable DisableIOMapper)
 * Above 4G decoding
 * Hyper-Threading
 * EHCI/XHCI Hand-off
