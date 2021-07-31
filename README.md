@@ -18,8 +18,8 @@ Highly recommended reading the whole [OpenCore Install Guide](https://dortania.g
 
 ## Software
 
-* Bootloader: OpenCore 0.6.4-DEBUG
-* OS: macOS Big Sur 11.0.1 (20B29 / 2020-11-12 / iMac19,1)
+* Bootloader: OpenCore 0.7.1-DEBUG
+* OS: macOS Big Sur 11.4 (20F71 / 2021-06-02 / iMac20,1)
 
 ## What's working
 
@@ -87,8 +87,6 @@ DeviceProperties:
 
 Working by:
 
-* FakePCIID.kext
-* FakePCIID_Intel_I225-V.kext
 * device-id=`F2150000`
 
 DeviceProperties: 
@@ -99,6 +97,37 @@ DeviceProperties:
     <key>device-id</key>
     <data>8hUAAA==</data>
 </dict>
+```
+
+Kernel Patch:
+
+```xml
+<dict>
+    <key>Base</key>
+    <string>__Z18e1000_set_mac_typeP8e1000_hw</string>
+    <key>Comment</key>
+    <string>I225-V patch</string>
+    <key>Count</key>
+    <integer>1</integer>
+    <key>Enabled</key>
+    <true/>
+    <key>Find</key>
+    <data>8hUAAA==</data>
+    <key>Identifier</key>
+    <string>com.apple.driver.AppleIntelI210Ethernet</string>
+    <key>MaxKernel</key>
+    <string>20.4.0</string>
+    <key>MinKernel</key>
+    <string>19.0.0</string>
+    <key>Replace</key>
+    <data>8xUAAA==</data>
+</dict>
+```
+
+boot-args
+
+```
+dk.e1000=0
 ```
 
 ### Wi-Fi/BT
@@ -227,22 +256,23 @@ Compiled by following the [Dortania's ACPI Guide](https://dortania.github.io/Get
 
 All kexts with a version tag are downloaded from original repositories.
 
-* VirtualSMC.kext `1.1.9`
-* SMCProcessor.kext `1.1.9`
-* SMCSuperIO.kext `1.1.9`
-* Lilu.kext `1.5.0`
-* WhateverGreen.kext `1.4.5`
-* AppleALC.kext `1.5.5`
-* NVMeFix.kext `1.0.4`
+* VirtualSMC.kext `1.2.5`
+* SMCProcessor.kext `1.2.5`
+* SMCSuperIO.kext `1.2.5`
+* Lilu.kext `1.5.4`
+* WhateverGreen.kext `1.5.1`
+* AppleALC.kext `1.6.2`
+* NVMeFix.kext `1.0.9`
 * RadeonBoost.kext `v1.6`
-* USBPorts.kext (exported by hackintool, for iMac19,1)
-* USBPorts-All.kext (disabled by default, include all ports of this board, for iMac19,1)
+* USBInjectAll.kext `v0.7.6` (missing HS11 port used for bluetooth)
+* USBPorts.kext (exported by hackintool, for iMac20,1)
+* USBPorts-All.kext (disabled by default, include all ports of this board, for iMac20,1)
+
+> Deprecated
+
 * FakePCIID.kext (from RehabMan `2018-1027`)
 * FakePCIID_intel_I225-V.kext
-
-> Deprecated since release v1.2.2
-
-* IntelMausi.kext `1.0.4`
+* IntelMausi.kext `1.0.7`
 * FakePCIID_Intel_HDMI_Audio.kext (from RehabMan `2018-1027`)
 
 ## Misc
@@ -270,8 +300,6 @@ The installation guide in the [OpenCore Install Guide](https://dortania.github.i
 
 ### Screenshots
 
-<img src="assets/iGPU.png" width="500" alt="iGPU"/>
-<img src="assets/videoproc.png" width="500" alt="videoproc"/>
 <img src="assets/dGPU.png" width="500" alt="dGPU"/>
 <img src="assets/videoproc-d.png" width="500" alt="videoproc-d"/>
 <img src="assets/IPG-Maximum-Frequency-test.png" width="500" alt="cpu-test"/>

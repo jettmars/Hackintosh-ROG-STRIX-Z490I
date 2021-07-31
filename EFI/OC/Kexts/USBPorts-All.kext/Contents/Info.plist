@@ -22,7 +22,7 @@
 	<string>1.0</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>iMac19,1-XHC</key>
+		<key>iMac20,1-XHC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.apple.driver.AppleUSBMergeNub</string>
@@ -35,7 +35,7 @@
 			<key>IOProbeScore</key>
 			<integer>5000</integer>
 			<key>IOProviderClass</key>
-			<string>AppleUSBXHCIPCI</string>
+			<string>AppleIntelCNLUSBXHCI</string>
 			<key>IOProviderMergeProperties</key>
 			<dict>
 				<key>kUSBSleepPortCurrentLimit</key>
@@ -47,9 +47,7 @@
 				<key>kUSBWakePowerSupply</key>
 				<integer>5100</integer>
 				<key>port-count</key>
-				<data>
-				GgAAAA==
-				</data>
+				<data>GgAAAA==</data>
 				<key>ports</key>
 				<dict>
 					<key>HS01</key>
@@ -59,9 +57,7 @@
 						<key>name</key>
 						<string>HS01</string>
 						<key>port</key>
-						<data>
-						AQAAAA==
-						</data>
+						<data>AQAAAA==</data>
 					</dict>
 					<key>HS02</key>
 					<dict>
@@ -70,9 +66,7 @@
 						<key>name</key>
 						<string>HS02</string>
 						<key>port</key>
-						<data>
-						AgAAAA==
-						</data>
+						<data>AgAAAA==</data>
 					</dict>
 					<key>HS03</key>
 					<dict>
@@ -81,9 +75,7 @@
 						<key>name</key>
 						<string>HS03</string>
 						<key>port</key>
-						<data>
-						AwAAAA==
-						</data>
+						<data>AwAAAA==</data>
 					</dict>
 					<key>HS04</key>
 					<dict>
@@ -92,9 +84,7 @@
 						<key>name</key>
 						<string>HS04</string>
 						<key>port</key>
-						<data>
-						BAAAAA==
-						</data>
+						<data>BAAAAA==</data>
 					</dict>
 					<key>HS05</key>
 					<dict>
@@ -103,9 +93,7 @@
 						<key>name</key>
 						<string>HS05</string>
 						<key>port</key>
-						<data>
-						BQAAAA==
-						</data>
+						<data>BQAAAA==</data>
 					</dict>
 					<key>HS06</key>
 					<dict>
@@ -114,9 +102,7 @@
 						<key>name</key>
 						<string>HS06</string>
 						<key>port</key>
-						<data>
-						BgAAAA==
-						</data>
+						<data>BgAAAA==</data>
 					</dict>
 					<key>HS07</key>
 					<dict>
@@ -125,9 +111,7 @@
 						<key>name</key>
 						<string>HS07</string>
 						<key>port</key>
-						<data>
-						BwAAAA==
-						</data>
+						<data>BwAAAA==</data>
 					</dict>
 					<key>HS08</key>
 					<dict>
@@ -136,9 +120,7 @@
 						<key>name</key>
 						<string>HS08</string>
 						<key>port</key>
-						<data>
-						CAAAAA==
-						</data>
+						<data>CAAAAA==</data>
 					</dict>
 					<key>HS09</key>
 					<dict>
@@ -147,9 +129,7 @@
 						<key>name</key>
 						<string>HS09</string>
 						<key>port</key>
-						<data>
-						CQAAAA==
-						</data>
+						<data>CQAAAA==</data>
 					</dict>
 					<key>HS10</key>
 					<dict>
@@ -158,9 +138,7 @@
 						<key>name</key>
 						<string>HS10</string>
 						<key>port</key>
-						<data>
-						CgAAAA==
-						</data>
+						<data>CgAAAA==</data>
 					</dict>
 					<key>HS11</key>
 					<dict>
@@ -169,9 +147,7 @@
 						<key>name</key>
 						<string>HS11</string>
 						<key>port</key>
-						<data>
-						CwAAAA==
-						</data>
+						<data>CwAAAA==</data>
 					</dict>
 					<key>HS12</key>
 					<dict>
@@ -180,9 +156,7 @@
 						<key>name</key>
 						<string>HS12</string>
 						<key>port</key>
-						<data>
-						DAAAAA==
-						</data>
+						<data>DAAAAA==</data>
 					</dict>
 					<key>HS13</key>
 					<dict>
@@ -191,9 +165,7 @@
 						<key>name</key>
 						<string>HS13</string>
 						<key>port</key>
-						<data>
-						DQAAAA==
-						</data>
+						<data>DQAAAA==</data>
 					</dict>
 					<key>HS14</key>
 					<dict>
@@ -202,9 +174,7 @@
 						<key>name</key>
 						<string>HS14</string>
 						<key>port</key>
-						<data>
-						DgAAAA==
-						</data>
+						<data>DgAAAA==</data>
 					</dict>
 					<key>SS01</key>
 					<dict>
@@ -213,9 +183,7 @@
 						<key>name</key>
 						<string>SS01</string>
 						<key>port</key>
-						<data>
-						EQAAAA==
-						</data>
+						<data>EQAAAA==</data>
 					</dict>
 					<key>SS02</key>
 					<dict>
@@ -224,9 +192,7 @@
 						<key>name</key>
 						<string>SS02</string>
 						<key>port</key>
-						<data>
-						EgAAAA==
-						</data>
+						<data>EgAAAA==</data>
 					</dict>
 					<key>SS03</key>
 					<dict>
@@ -235,9 +201,7 @@
 						<key>name</key>
 						<string>SS03</string>
 						<key>port</key>
-						<data>
-						EwAAAA==
-						</data>
+						<data>EwAAAA==</data>
 					</dict>
 					<key>SS04</key>
 					<dict>
@@ -246,9 +210,7 @@
 						<key>name</key>
 						<string>SS04</string>
 						<key>port</key>
-						<data>
-						FAAAAA==
-						</data>
+						<data>FAAAAA==</data>
 					</dict>
 					<key>SS05</key>
 					<dict>
@@ -257,9 +219,7 @@
 						<key>name</key>
 						<string>SS05</string>
 						<key>port</key>
-						<data>
-						FQAAAA==
-						</data>
+						<data>FQAAAA==</data>
 					</dict>
 					<key>SS06</key>
 					<dict>
@@ -268,9 +228,7 @@
 						<key>name</key>
 						<string>SS06</string>
 						<key>port</key>
-						<data>
-						FgAAAA==
-						</data>
+						<data>FgAAAA==</data>
 					</dict>
 					<key>SS07</key>
 					<dict>
@@ -279,9 +237,7 @@
 						<key>name</key>
 						<string>SS07</string>
 						<key>port</key>
-						<data>
-						FwAAAA==
-						</data>
+						<data>FwAAAA==</data>
 					</dict>
 					<key>SS08</key>
 					<dict>
@@ -290,9 +246,7 @@
 						<key>name</key>
 						<string>SS08</string>
 						<key>port</key>
-						<data>
-						GAAAAA==
-						</data>
+						<data>GAAAAA==</data>
 					</dict>
 					<key>SS09</key>
 					<dict>
@@ -301,9 +255,7 @@
 						<key>name</key>
 						<string>SS09</string>
 						<key>port</key>
-						<data>
-						GQAAAA==
-						</data>
+						<data>GQAAAA==</data>
 					</dict>
 					<key>SS10</key>
 					<dict>
@@ -312,9 +264,7 @@
 						<key>name</key>
 						<string>SS10</string>
 						<key>port</key>
-						<data>
-						GgAAAA==
-						</data>
+						<data>GgAAAA==</data>
 					</dict>
 					<key>USR1</key>
 					<dict>
@@ -323,9 +273,7 @@
 						<key>name</key>
 						<string>USR1</string>
 						<key>port</key>
-						<data>
-						DwAAAA==
-						</data>
+						<data>DwAAAA==</data>
 					</dict>
 					<key>USR2</key>
 					<dict>
@@ -334,14 +282,12 @@
 						<key>name</key>
 						<string>USR2</string>
 						<key>port</key>
-						<data>
-						EAAAAA==
-						</data>
+						<data>EAAAAA==</data>
 					</dict>
 				</dict>
 			</dict>
 			<key>model</key>
-			<string>iMac19,1</string>
+			<string>iMac20,1</string>
 		</dict>
 	</dict>
 	<key>OSBundleRequired</key>
