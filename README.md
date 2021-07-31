@@ -179,9 +179,8 @@ You can make your own mapping by hackintool, here's my choice:
 Works with DP output and power button. GPRW Patch is used to disabling the USB device instant wake.
 
 **Note:**
-1. Bluetooth has a delay of about 7 seconds after the display is turned on.
-2. When using HDMI, the display cannot be woken up.
-3. Without enabling GPRW, a keyboard press or mouse click can wake up the display as well, but a second press or click is needed when the light is on, I tried to fix it by following [Keyboard Wake Issues Guide](https://dortania.github.io/USB-Map-Guide/misc/keyboard.html), but didn't work. So my choice is to just use the power button, disable `SSDT-GPRW` if you want to use a keyboard or mouse to wake up.
+1. When using HDMI, the display cannot be woken up.
+2. Without enabling GPRW, a keyboard press or mouse click can wake up the display as well, but a second press or click is needed when the light is on, I tried to fix it by following [Keyboard Wake Issues Guide](https://dortania.github.io/USB-Map-Guide/misc/keyboard.html), but didn't work. So my choice is to just use the power button, disable `SSDT-GPRW` if you want to use a keyboard or mouse to wake up.
 
 ### F1 Boot Error
 
@@ -270,9 +269,9 @@ All kexts with a version tag are downloaded from original repositories.
 
 > Deprecated
 
+* IntelMausi.kext `1.0.7`
 * FakePCIID.kext (from RehabMan `2018-1027`)
 * FakePCIID_intel_I225-V.kext
-* IntelMausi.kext `1.0.7`
 * FakePCIID_Intel_HDMI_Audio.kext (from RehabMan `2018-1027`)
 
 ## Misc
