@@ -132,7 +132,7 @@ Working by using an m.2 M-Key adapter with Apple Airport Card BCM94360CS. It's n
 
 The Bluetooth can not be recognized by default, it uses the onboard 9-pin USB2.0 port for power supply, so USB mapping should be fixed to make it work.
 
-<img src="assets/wifi-bt.png" width="500" alt="wifi-bt"/>
+<img src="imgs/wifi-bt.png" width="500" alt="wifi-bt"/>
 
 
 > The onboard wireless network card Intel AX201NGW uses m.2 E-Key slot and CNVi protocol. I tried to replace it with an m.2 A-Key BCM94352Z card, the slot is compatible but it didn't work even in Windows, thanks to the CNVi thing 😓. So don't try to replace the onboard card.
@@ -142,8 +142,8 @@ The Bluetooth can not be recognized by default, it uses the onboard 9-pin USB2.0
 
 All ports are working fine except for the ones disabled due to the 15 port limit.
 
-<img src="assets/usb-rear.png" width="500" alt="usb-rear"/>
-<img src="assets/usb-onboard.png" width="500" alt="usb-onboard"/>
+<img src="imgs/usb-rear.png" width="500" alt="usb-rear"/>
+<img src="imgs/usb-onboard.png" width="500" alt="usb-onboard"/>
 
 USB Ports:
 
@@ -168,7 +168,7 @@ USB Ports:
 
 You can make your own mapping by hackintool, here's my choice:
 
-<img src="assets/usb-ports.png" width="500" alt="usb-ports"/>
+<img src="imgs/usb-ports.png" width="500" alt="usb-ports"/>
 
 ### Sleep/Wake
 
@@ -295,10 +295,10 @@ The [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 
 ### Screenshots
 
-<img src="assets/iGPU.png" width="500" alt="iGPU"/>
-<img src="assets/dGPU.png" width="500" alt="dGPU"/>
-<img src="assets/videoproc.png" width="500" alt="videoproc"/>
-<img src="assets/videoproc-d.png" width="500" alt="videoproc-d"/>
+<img src="imgs/iGPU.png" width="500" alt="iGPU"/>
+<img src="imgs/dGPU.png" width="500" alt="dGPU"/>
+<img src="imgs/videoproc.png" width="500" alt="videoproc"/>
+<img src="imgs/videoproc-d.png" width="500" alt="videoproc-d"/>
 
 ## Credits
 
