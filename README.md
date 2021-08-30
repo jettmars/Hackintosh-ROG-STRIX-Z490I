@@ -274,7 +274,7 @@ All kexts with a version tag are downloaded from original repositories.
 
 ### Installation
 
-The installation guide in the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) are quite clear and easy, so there will be no detailed installation tutorials here. Give it some patience and you can build your own EFI.
+The [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) is quite clear and easy, so there will be no detailed installation tutorials here. Give it some patience and you can build your own EFI.
 
 ### Tools
 
@@ -299,7 +299,6 @@ The installation guide in the [OpenCore Install Guide](https://dortania.github.i
 <img src="assets/dGPU.png" width="500" alt="dGPU"/>
 <img src="assets/videoproc.png" width="500" alt="videoproc"/>
 <img src="assets/videoproc-d.png" width="500" alt="videoproc-d"/>
-<img src="assets/IPG-Maximum-Frequency-test.png" width="500" alt="cpu-test"/>
 
 ## Credits
 
