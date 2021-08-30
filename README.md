@@ -19,7 +19,7 @@ Highly recommended reading the whole [OpenCore Install Guide](https://dortania.g
 ## Software
 
 * Bootloader: OpenCore 0.7.1-DEBUG
-* OS: macOS Big Sur 11.4 (20F71 / 2021-06-02 / iMac20,1)
+* OS: macOS Big Sur 11.5.2 (iMac20,1)
 
 ## What's working
 
@@ -44,7 +44,6 @@ HDMI/DP display and audio output are working fine.
 Working by:
 
 * ig-platform-id = `07009B3E`
-* device-id = `9B3E0000`
 
 DeviceProperties: 
 
@@ -55,10 +54,6 @@ DeviceProperties:
     <data>BwCbPg==</data>
     <key>framebuffer-patch-enable</key>
     <data>AQAAAA==</data>
-    <key>framebuffer-stolenmem</key>
-    <data>AAAAQA==</data>
-    <key>device-id</key>
-    <data>mz4AAA==</data>
 </dict>
 ```
 
@@ -299,7 +294,9 @@ The installation guide in the [OpenCore Install Guide](https://dortania.github.i
 
 ### Screenshots
 
+<img src="assets/iGPU.png" width="500" alt="iGPU"/>
 <img src="assets/dGPU.png" width="500" alt="dGPU"/>
+<img src="assets/videoproc.png" width="500" alt="videoproc"/>
 <img src="assets/videoproc-d.png" width="500" alt="videoproc-d"/>
 <img src="assets/IPG-Maximum-Frequency-test.png" width="500" alt="cpu-test"/>
 

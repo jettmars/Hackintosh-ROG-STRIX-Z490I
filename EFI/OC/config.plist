@@ -306,12 +306,8 @@
 				<string>Intel UHD Graphics 630</string>
 				<key>AAPL,ig-platform-id</key>
 				<data>BwCbPg==</data>
-				<key>device-id</key>
-				<data>mz4AAA==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAAQA==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)</key>
 			<dict>
