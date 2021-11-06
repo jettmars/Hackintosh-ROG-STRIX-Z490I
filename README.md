@@ -20,7 +20,7 @@ Highly recommended reading the whole [OpenCore Install Guide](https://dortania.g
 ## Software
 
 * Bootloader: OpenCore 0.7.5-DEBUG
-* OS: macOS Big Sur 12.0.1 (iMac20,1)
+* OS: macOS Monterey 12.0.1 (iMac20,1)
 
 ## What's working
 
