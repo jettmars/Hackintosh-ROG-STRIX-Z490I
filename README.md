@@ -19,8 +19,8 @@ Highly recommended reading the whole [OpenCore Install Guide](https://dortania.g
 
 ## Software
 
-* Bootloader: OpenCore 0.7.1-DEBUG
-* OS: macOS Big Sur 11.5.2 (iMac20,1)
+* Bootloader: OpenCore 0.7.5-DEBUG
+* OS: macOS Big Sur 11.6.1 (iMac20,1)
 
 ## What's working
 
@@ -251,16 +251,15 @@ Compiled by following the [Dortania's ACPI Guide](https://dortania.github.io/Get
 
 All kexts with a version tag are downloaded from original repositories.
 
-* VirtualSMC.kext `1.2.5`
-* SMCProcessor.kext `1.2.5`
-* SMCSuperIO.kext `1.2.5`
-* Lilu.kext `1.5.4`
-* WhateverGreen.kext `1.5.1`
-* AppleALC.kext `1.6.2`
+* VirtualSMC.kext `1.2.7`
+* SMCProcessor.kext `1.2.7`
+* SMCSuperIO.kext `1.2.7`
+* Lilu.kext `1.5.7`
+* WhateverGreen.kext `1.5.5`
+* AppleALC.kext `1.6.6`
 * NVMeFix.kext `1.0.9`
 * RadeonBoost.kext `v1.6`
-* USBInjectAll.kext `v0.7.6` (missing HS11 port used for bluetooth)
-* USBPorts.kext (exported by hackintool, for iMac20,1)
+* USBPorts.kext (exported by hackintool, for iMac20,1, personal edition)
 * USBPorts-All.kext (disabled by default, include all ports of this board, for iMac20,1)
 
 > Deprecated
@@ -269,6 +268,7 @@ All kexts with a version tag are downloaded from original repositories.
 * FakePCIID.kext (from RehabMan `2018-1027`)
 * FakePCIID_intel_I225-V.kext
 * FakePCIID_Intel_HDMI_Audio.kext (from RehabMan `2018-1027`)
+* USBInjectAll.kext `v0.7.6` (missing HS11 port used for bluetooth)
 
 ## Misc
 
