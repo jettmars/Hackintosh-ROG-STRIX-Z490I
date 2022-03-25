@@ -19,8 +19,8 @@ Highly recommended reading the whole [OpenCore Install Guide](https://dortania.g
 
 ## Software
 
-* Bootloader: OpenCore 0.7.5-DEBUG
-* OS: macOS Monterey 12.0.1 (iMac20,1)
+* Bootloader: OpenCore 0.7.9-DEBUG
+* OS: macOS Monterey 12.3 (iMac20,1)
 
 ## What's working
 
@@ -251,12 +251,12 @@ Compiled by following the [Dortania's ACPI Guide](https://dortania.github.io/Get
 
 All kexts with a version tag are downloaded from original repositories.
 
-* VirtualSMC.kext `1.2.7`
-* SMCProcessor.kext `1.2.7`
-* SMCSuperIO.kext `1.2.7`
-* Lilu.kext `1.5.7`
-* WhateverGreen.kext `1.5.5`
-* AppleALC.kext `1.6.6`
+* VirtualSMC.kext `1.2.9`
+* SMCProcessor.kext `1.2.9`
+* SMCSuperIO.kext `1.2.9`
+* Lilu.kext `1.6.0`
+* WhateverGreen.kext `1.5.8`
+* AppleALC.kext `1.7.0`
 * NVMeFix.kext `1.0.9`
 * RadeonBoost.kext `v1.6`
 * USBPorts.kext (exported by hackintool, for iMac20,1, personal edition)
