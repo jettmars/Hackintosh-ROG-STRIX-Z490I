@@ -126,6 +126,12 @@ boot-args
 dk.e1000=0
 ```
 
+After updating the os to 12.3, you may run into a reboot loop, try this:
+
+```
+e1000=0
+```
+
 ### Wi-Fi/BT
 
 Working by using an m.2 M-Key adapter with Apple Airport Card BCM94360CS. It's natively supported, airdrop, handoff, and sidecar are working perfectly. The bottom side m.2 slot for SSD is occupied and the bottom SSD heat sink must be abandoned.
@@ -135,7 +141,7 @@ The Bluetooth can not be recognized by default, it uses the onboard 9-pin USB2.0
 <img src="imgs/wifi-bt.png" width="500" alt="wifi-bt"/>
 
 
-> The onboard wireless network card Intel AX201NGW uses m.2 E-Key slot and CNVi protocol. I tried to replace it with an m.2 A-Key BCM94352Z card, the slot is compatible but it didn't work even in Windows, thanks to the CNVi thing 😓. So don't try to replace the onboard card.
+> The onboard wireless network card Intel AX201NGW uses m.2 E-Key slot and CNVi protocol. I tried to replace it with an m.2 A-Key BCM94352Z card, the slot is compatible but it didn't work even in Windows, so don't try to replace the onboard card if you don't know what you're doing.
 
 
 ### USB
@@ -179,6 +185,8 @@ Works with DP output and power button. GPRW Patch is used to disabling the USB d
 2. Without enabling GPRW, a keyboard press or mouse click can wake up the display as well, but a second press or click is needed when the light is on, I tried to fix it by following [Keyboard Wake Issues Guide](https://dortania.github.io/USB-Map-Guide/misc/keyboard.html), but didn't work. So my choice is to just use the power button, disable `SSDT-GPRW` if you want to use a keyboard or mouse to wake up.
 
 ### F1 Boot Error
+
+> Don't bother if you didn't run into this error.
 
 Add patch to `Kernel -> Patch`:
 
@@ -292,13 +300,6 @@ The [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 | CPU - Geekbench | [Single / Multi-Core](https://browser.geekbench.com/v5/cpu/2750529): 1218 / 8909 |
 | Intel UHD630 - Geekbench | [OpenCL](https://browser.geekbench.com/v5/compute/1092240) / [Metal](https://browser.geekbench.com/v5/compute/1120839): 4826 / 4790 |
 | AMD Radeon VII - Geekbench | [OpenCL](https://browser.geekbench.com/v5/compute/1121010) / [Metal](https://browser.geekbench.com/v5/compute/1121020): 75925 / 85089 |
-
-### Screenshots
-
-<img src="imgs/iGPU.png" width="500" alt="iGPU"/>
-<img src="imgs/dGPU.png" width="500" alt="dGPU"/>
-<img src="imgs/videoproc.png" width="500" alt="videoproc"/>
-<img src="imgs/videoproc-d.png" width="500" alt="videoproc-d"/>
 
 ## Credits
 
