@@ -4,7 +4,7 @@ This repository is about hackintosh on **Asus ROG STRIX Z490I**. For now, all th
 
 Anyone who has the same board can use my EFI directly. The source EFI folder uses debug version of OpenCore, mainly used for installation and testing. It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide #PlatformInfo](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html). 
 
-Highly recommended reading the whole [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) before you start.
+Highly recommended reading the whole [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) before start.
 
 ## Hardware
 
@@ -12,15 +12,15 @@ Highly recommended reading the whole [OpenCore Install Guide](https://dortania.g
     * Ethernet: Intel I225-V 2.5Gbit
     * Wi-Fi/BT: Intel AX201NGW (onboard) / BCM94360CS(M.2 Adapter)
     * Audio: Realtek ALCS1220A
-* CPU: Intel i7-10700 / 10700K
-* GPU: Intel UHD630 / AMD Radeon VII
+* CPU: Intel i7-10700
+* GPU: Intel UHD630 / AMD Radeon RX 6600XT
 * RAM: CORSAIR VENGEANCE LPX DDR4 3200 32GB(16G×2)
 * Display: DELL U2720QM (3840 x 2160 @ 60.00Hz)
 
 ## Software
 
-* Bootloader: OpenCore 0.7.9-DEBUG
-* OS: macOS Monterey 12.3 (iMac20,1)
+* Bootloader: OpenCore 0.8.1-DEBUG
+* OS: macOS Monterey 12.4 (iMac20,1)
 
 ## What's working
 
@@ -58,9 +58,13 @@ DeviceProperties:
 </dict>
 ```
 
-#### AMD Radeon VII
+#### AMD Radeon RX 6600XT
 
-Native support, no additional configuration. Enable `Radeonboost.kext` to improve performance if needed.
+Native support with boot-args:
+
+```
+agdpmod=pikera
+```
 
 ### Audio
 
@@ -126,11 +130,8 @@ boot-args
 dk.e1000=0
 ```
 
-After updating the os to 12.3, you may run into a reboot loop, try this:
+Use `e1000=0` instead of dk.e1000=0` since macOS Monterey 12.3.
 
-```
-e1000=0
-```
 
 ### Wi-Fi/BT
 
@@ -263,15 +264,15 @@ All kexts with a version tag are downloaded from original repositories.
 * SMCProcessor.kext `1.2.9`
 * SMCSuperIO.kext `1.2.9`
 * Lilu.kext `1.6.0`
-* WhateverGreen.kext `1.5.8`
-* AppleALC.kext `1.7.0`
+* WhateverGreen.kext `1.5.9`
+* AppleALC.kext `1.7.2`
 * NVMeFix.kext `1.0.9`
-* RadeonBoost.kext `v1.6`
 * USBPorts.kext (exported by hackintool, for iMac20,1, personal edition)
 * USBPorts-All.kext (disabled by default, include all ports of this board, for iMac20,1)
 
 > Deprecated
 
+* RadeonBoost.kext `v1.6`
 * IntelMausi.kext `1.0.7`
 * FakePCIID.kext (from RehabMan `2018-1027`)
 * FakePCIID_intel_I225-V.kext
@@ -297,9 +298,9 @@ The [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 
 | Item | Score |
 |---|---|
-| CPU - Geekbench | [Single / Multi-Core](https://browser.geekbench.com/v5/cpu/2750529): 1218 / 8909 |
-| Intel UHD630 - Geekbench | [OpenCL](https://browser.geekbench.com/v5/compute/1092240) / [Metal](https://browser.geekbench.com/v5/compute/1120839): 4826 / 4790 |
-| AMD Radeon VII - Geekbench | [OpenCL](https://browser.geekbench.com/v5/compute/1121010) / [Metal](https://browser.geekbench.com/v5/compute/1121020): 75925 / 85089 |
+| CPU - Geekbench | Single-Core: 1234 / Multi-Core: 8909 |
+| Intel UHD630 - Geekbench | OpenCL: 4826 / Metal: 4790 |
+| AMD Radeon RX 6600XT - Geekbench | OpenCL: 63628: / Metal: 76831 |
 
 ## Credits
 
