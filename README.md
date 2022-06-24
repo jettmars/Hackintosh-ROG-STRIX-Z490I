@@ -25,7 +25,7 @@ Highly recommended reading the whole [OpenCore Install Guide](https://dortania.g
 ## What's working
 
 - [x] Intel UHD630 (iGPU)
-- [x] AMD Radeon VII (dGPU)
+- [x] AMD Radeon RX 6600XT (dGPU)
 - [x] Audio Realtek ALCS1220A
 - [x] Intel I225-V 2.5Gb Ethernet
 - [x] Wi-Fi/BT (BCM94360CS)
@@ -258,17 +258,15 @@ Compiled by following the [Dortania's ACPI Guide](https://dortania.github.io/Get
 
 #### Kexts
 
-All kexts with a version tag are downloaded from original repositories.
-
-* VirtualSMC.kext `1.2.9`
-* SMCProcessor.kext `1.2.9`
-* SMCSuperIO.kext `1.2.9`
-* Lilu.kext `1.6.0`
-* WhateverGreen.kext `1.5.9`
-* AppleALC.kext `1.7.2`
-* NVMeFix.kext `1.0.9`
-* USBPorts.kext (exported by hackintool, for iMac20,1, personal edition)
+* [VirtualSMC.kext](https://github.com/acidanthera/VirtualSMC) `1.2.9`
+* [SMCProcessor.kext](https://github.com/acidanthera/VirtualSMC) `1.2.9`
+* [SMCSuperIO.kext](https://github.com/acidanthera/VirtualSMC) `1.2.9`
+* [Lilu.kext](https://github.com/acidanthera/Lilu) `1.6.0`
+* [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen) `1.5.9`
+* [AppleALC.kext](https://github.com/acidanthera/AppleALC) `1.7.2`
+* [NVMeFix.kext](https://github.com/acidanthera/NVMeFix) `1.0.9`
 * USBPorts-All.kext (disabled by default, include all ports of this board, for iMac20,1)
+* USBPorts.kext (exported by hackintool, for iMac20,1, personal edition)
 
 > Deprecated
 
