@@ -15,7 +15,7 @@ Highly recommended reading the whole [OpenCore Install Guide](https://dortania.g
 * CPU: Intel i7-10700
 * GPU: Intel UHD630 / AMD Radeon RX 6600XT
 * RAM: CORSAIR VENGEANCE LPX DDR4 3200 32GB(16G×2)
-* Display: DELL U2720QM (3840 x 2160 @ 60.00Hz)
+* SSD: Samsung 970 EVO Plus NVMe
 
 ## Software
 
