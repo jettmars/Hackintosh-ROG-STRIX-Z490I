@@ -224,7 +224,7 @@ Add patch to `Kernel -> Patch`:
 
 ### BIOS
 
-> Version: 0901
+> Version: 2403
 
 #### Disable
 
