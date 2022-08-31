@@ -130,7 +130,7 @@ boot-args
 dk.e1000=0
 ```
 
-Use `e1000=0` instead of dk.e1000=0` since macOS Monterey 12.3.
+Use `e1000=0` instead of `dk.e1000=0` since macOS Monterey 12.3.
 
 
 ### Wi-Fi/BT
