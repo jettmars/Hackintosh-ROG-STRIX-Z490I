@@ -11,7 +11,7 @@
 	<key>#WARNING - 4</key>
 	<string>Use SampleCustom.plist only for special cases.</string>
 	<key>#OCVERSION</key>
-	<string>0.8.1</string>
+	<string>0.8.6</string>
 	<key>ACPI</key>
 	<dict>
 		<key>Add</key>
@@ -1078,6 +1078,8 @@
 				<true/>
 				<key>Flavour</key>
 				<string>OpenShell:UEFIShell:Shell</string>
+				<key>FullNvramAccess</key>
+				<false/>
 				<key>Name</key>
 				<string>UEFI Shell</string>
 				<key>Path</key>
@@ -1098,6 +1100,8 @@
 				<false/>
 				<key>Flavour</key>
 				<string>MemTest</string>
+				<key>FullNvramAccess</key>
+				<false/>
 				<key>Name</key>
 				<string>memtest86</string>
 				<key>Path</key>
@@ -1118,6 +1122,8 @@
 				<true/>
 				<key>Flavour</key>
 				<string>Auto</string>
+				<key>FullNvramAccess</key>
+				<false/>
 				<key>Name</key>
 				<string>Shutdown</string>
 				<key>Path</key>
@@ -1154,7 +1160,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 debug=0x100 agdpmod=pikera e1000=0</string>
+				<string>-v keepsyms=1 debug=0x100 agdpmod=pikera e1000=0 vsmcgen=1</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1179,8 +1185,6 @@
 				<string>ForceDisplayRotationInEFI</string>
 			</array>
 		</dict>
-		<key>LegacyEnable</key>
-		<false/>
 		<key>LegacyOverwrite</key>
 		<false/>
 		<key>LegacySchema</key>
@@ -1225,7 +1229,7 @@
 			<key>AdviseFeatures</key>
 			<false/>
 			<key>MLB</key>
-			<string>c</string>
+			<string>Paste your MLB here</string>
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>ProcessorType</key>
@@ -1283,6 +1287,12 @@
 			<integer>50</integer>
 			<key>KeySubsequentDelay</key>
 			<integer>5</integer>
+			<key>PointerDwellClickTimeout</key>
+			<integer>0</integer>
+			<key>PointerDwellDoubleClickTimeout</key>
+			<integer>0</integer>
+			<key>PointerDwellRadius</key>
+			<integer>0</integer>
 			<key>PointerPollMask</key>
 			<integer>-1</integer>
 			<key>PointerPollMax</key>
@@ -1327,9 +1337,35 @@
 				<key>Arguments</key>
 				<string></string>
 				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>LoadEarly</key>
+				<true/>
+				<key>Path</key>
+				<string>OpenVariableRuntimeDxe.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>LoadEarly</key>
+				<false/>
+				<key>Path</key>
+				<string>OpenRuntime.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
 				<string>HFS+ Driver</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>HfsPlus.efi</string>
 			</dict>
@@ -1339,16 +1375,8 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>OpenRuntime.efi</string>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
+				<false/>
+				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
 				<string>OpenCanopy.efi</string>
@@ -1360,6 +1388,8 @@
 				<string></string>
 				<key>Enabled</key>
 				<false/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>AudioDxe.efi</string>
 			</dict>
@@ -1369,6 +1399,8 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
+				<false/>
+				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
 				<string>OpenPartitionDxe.efi</string>
@@ -1380,6 +1412,8 @@
 				<string></string>
 				<key>Enabled</key>
 				<false/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>OpenUsbKbDxe.efi</string>
 			</dict>
@@ -1389,6 +1423,8 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
+				<false/>
+				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
 				<string>UsbMouseDxe.efi</string>
@@ -1400,6 +1436,8 @@
 				<string></string>
 				<key>Enabled</key>
 				<false/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>Ps2KeyboardDxe.efi</string>
 			</dict>
@@ -1409,6 +1447,8 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
+				<false/>
+				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
 				<string>Ps2MouseDxe.efi</string>
@@ -1420,6 +1460,8 @@
 				<string></string>
 				<key>Enabled</key>
 				<false/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>HiiDatabase.efi</string>
 			</dict>
@@ -1429,6 +1471,8 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
+				<false/>
+				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
 				<string>NvmExpressDxe.efi</string>
@@ -1440,6 +1484,8 @@
 				<string></string>
 				<key>Enabled</key>
 				<false/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>XhciDxe.efi</string>
 			</dict>
@@ -1449,6 +1495,8 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
+				<false/>
+				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
 				<string>ExFatDxe.efi</string>
@@ -1460,6 +1508,8 @@
 				<string></string>
 				<key>Enabled</key>
 				<false/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>CrScreenshotDxe.efi</string>
 			</dict>
@@ -1470,8 +1520,10 @@
 				<string></string>
 				<key>Enabled</key>
 				<false/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
-				<string>ext4_x64.efi</string>
+				<string>Ext4Dxe.efi</string>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -1479,6 +1531,8 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
+				<false/>
+				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
 				<string>OpenLinuxBoot.efi</string>
@@ -1490,6 +1544,8 @@
 				<string></string>
 				<key>Enabled</key>
 				<false/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>ResetNvramEntry.efi</string>
 			</dict>
@@ -1499,6 +1555,8 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
+				<false/>
+				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
 				<string>ToggleSipEntry.efi</string>
