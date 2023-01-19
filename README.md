@@ -19,8 +19,8 @@ Highly recommended reading the whole [OpenCore Install Guide](https://dortania.g
 
 ## Software
 
-* Bootloader: OpenCore 0.8.6-DEBUG
-* OS: macOS Ventura 13.0.1 (iMac20,1)
+* Bootloader: OpenCore 0.8.8-DEBUG
+* OS: macOS Ventura 13.1 (iMac20,1)
 
 ## What's working
 
@@ -261,9 +261,9 @@ Compiled by following the [Dortania's ACPI Guide](https://dortania.github.io/Get
 * [VirtualSMC.kext](https://github.com/acidanthera/VirtualSMC) `1.3.0`
 * [SMCProcessor.kext](https://github.com/acidanthera/VirtualSMC) `1.3.0`
 * [SMCSuperIO.kext](https://github.com/acidanthera/VirtualSMC) `1.3.0`
-* [Lilu.kext](https://github.com/acidanthera/Lilu) `1.6.2`
-* [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen) `1.6.1`
-* [AppleALC.kext](https://github.com/acidanthera/AppleALC) `1.7.6`
+* [Lilu.kext](https://github.com/acidanthera/Lilu) `1.6.3`
+* [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen) `1.6.3`
+* [AppleALC.kext](https://github.com/acidanthera/AppleALC) `1.7.8`
 * [NVMeFix.kext](https://github.com/acidanthera/NVMeFix) `1.1.0`
 * USBPorts-All.kext (disabled by default, include all ports of this board, for iMac20,1)
 * USBPorts.kext (exported by hackintool, for iMac20,1, personal edition)
